@@ -1,5 +1,5 @@
 //
-//  SignUp.swift
+//  LogIn.swift
 //  Estacionate
 //
 //  Created by Israel Velazquez Sanchez on 07/03/15.
@@ -8,20 +8,18 @@
 
 import UIKit
 
-class SignUp: UIViewController,UITextFieldDelegate {
-
+class LogIn: UIViewController,UITextFieldDelegate {
+ 
     
-    
-    @IBOutlet weak var tf_name: UITextField!
     @IBOutlet weak var tf_email: UITextField!
-    @IBOutlet weak var tf_pass: UITextField!
-    @IBOutlet weak var tf_cPass: UITextField!
     
+    @IBOutlet weak var tf_pass: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureTextField([tf_cPass,tf_email,tf_name,tf_pass])
+        // Do any additional setup after loading the view.
+        configureTextField([tf_pass,tf_email])
         let center = NSNotificationCenter.defaultCenter()
         self.navigationItem.title = "Registro"
         
@@ -34,13 +32,13 @@ class SignUp: UIViewController,UITextFieldDelegate {
             selector: "handleKeyboardWillHide:",
             name: UIKeyboardWillHideNotification,
             object: nil)
-        
+
     }
     
     func handleKeyboardWillHide(sender: NSNotification){
         
         self.view.frame.origin.y = 0
-       
+        
         
     }
     
@@ -54,6 +52,7 @@ class SignUp: UIViewController,UITextFieldDelegate {
         super.viewWillDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -80,30 +79,25 @@ class SignUp: UIViewController,UITextFieldDelegate {
             b.layer.borderWidth = 1
         }
     }
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         switch textField {
-        case tf_name:
-            tf_email.becomeFirstResponder()
-            break;
         case tf_email:
             tf_pass.becomeFirstResponder()
             break;
         case tf_pass:
-            tf_cPass.becomeFirstResponder()
-            break;
-        case tf_cPass:
-            tf_cPass.resignFirstResponder()
-            registro()
+            tf_pass.resignFirstResponder()
+            entrar()
             break;
         default:
             break;
         }
-        return true
+        return true;
+    }
+    
+    
+    
+    @IBAction func entrar() {
+        
     }
 
-    
-    @IBAction func registro() {
-    }
-    
 }

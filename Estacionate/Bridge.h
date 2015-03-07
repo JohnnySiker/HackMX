@@ -10,4 +10,5 @@
 #define Estacionate_Bridge_h
 
 #import <FacebookSDK/FacebookSDK.h>
+#import <GoogleMaps/GoogleMaps.h>
 #endif

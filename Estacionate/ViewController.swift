@@ -56,11 +56,14 @@ class ViewController: UIViewController,FBLoginViewDelegate {
     
     
     @IBAction func LogIn(sender: UIButton) {
-       // let nView = self.storyboard?.instantiateViewControllerWithIdentifier("LogIn") as LogIn
-       // self.navigationController?.pushViewController(nView, animated: true)
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("LogIn") as UIViewController
+       self.navigationController?.pushViewController(nView, animated: true)
         
     }
-
+    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBar.alpha = 0
+    }
 
 }
 
