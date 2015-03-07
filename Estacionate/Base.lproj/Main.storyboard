@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="1338" y="1428"/>
         </scene>
-        <!--View Controller-->
+        <!--Maps Controller-->
         <scene sceneID="TXn-6k-JYl">
             <objects>
-                <viewController id="qq6-LC-H5J" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Map" id="qq6-LC-H5J" customClass="MapsController" customModule="Estacionate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v0h-sf-Gsa"/>
                         <viewControllerLayoutGuide type="bottom" id="YYz-oj-epd"/>
@@ -140,9 +140,18 @@
                     <view key="view" contentMode="scaleToFill" id="qWd-U8-8de">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-CR-u1q" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="map" destination="8yd-CR-u1q" id="Iu8-kD-Jog"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdY-aP-bBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

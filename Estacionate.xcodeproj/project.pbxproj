@@ -26,6 +26,9 @@
 		9F7BD3C31AAB196500DF71D9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3C21AAB196500DF71D9 /* SystemConfiguration.framework */; };
 		9F7BD3C51AAB196F00DF71D9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3C41AAB196F00DF71D9 /* CoreLocation.framework */; };
 		9F7BD3C71AAB197500DF71D9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3C61AAB197500DF71D9 /* CoreText.framework */; };
+		9F7BD3CA1AAB1ED100DF71D9 /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD3C91AAB1ED100DF71D9 /* MapsController.swift */; };
+		9F7BD3CC1AAB212100DF71D9 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BD3CB1AAB212100DF71D9 /* GoogleMaps.bundle */; };
+		9F7BD3CE1AAB214400DF71D9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3CD1AAB214400DF71D9 /* libz.dylib */; };
 		9FC36B8E1AAB035900DD1575 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC36B8D1AAB035900DD1575 /* FacebookSDK.framework */; };
 		9FC36B931AAB099300DD1575 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC36B921AAB099300DD1575 /* SignUp.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +67,9 @@
 		9F7BD3C21AAB196500DF71D9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9F7BD3C41AAB196F00DF71D9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9F7BD3C61AAB197500DF71D9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		9F7BD3C91AAB1ED100DF71D9 /* MapsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
+		9F7BD3CB1AAB212100DF71D9 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		9F7BD3CD1AAB214400DF71D9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9FC36B8D1AAB035900DD1575 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		9FC36B8F1AAB043300DD1575 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		9FC36B921AAB099300DD1575 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7BD3CE1AAB214400DF71D9 /* libz.dylib in Frameworks */,
 				9F7BD3C71AAB197500DF71D9 /* CoreText.framework in Frameworks */,
 				9F7BD3C51AAB196F00DF71D9 /* CoreLocation.framework in Frameworks */,
 				9F7BD3C31AAB196500DF71D9 /* SystemConfiguration.framework in Frameworks */,
@@ -103,6 +110,7 @@
 		9F5651DD1AAAF5F80030886B = {
 			isa = PBXGroup;
 			children = (
+				9F7BD3CD1AAB214400DF71D9 /* libz.dylib */,
 				9F7BD3C81AAB199300DF71D9 /* Framework */,
 				9F5651E81AAAF5F80030886B /* Estacionate */,
 				9F5651FE1AAAF5F80030886B /* EstacionateTests */,
@@ -126,6 +134,7 @@
 				9F5651ED1AAAF5F80030886B /* ViewController.swift */,
 				9FC36B921AAB099300DD1575 /* SignUp.swift */,
 				9F7BD3A91AAB119600DF71D9 /* LogIn.swift */,
+				9F7BD3C91AAB1ED100DF71D9 /* MapsController.swift */,
 				9F5651EF1AAAF5F80030886B /* Main.storyboard */,
 				9F5651F21AAAF5F80030886B /* Images.xcassets */,
 				9F5651F41AAAF5F80030886B /* LaunchScreen.xib */,
@@ -163,6 +172,7 @@
 		9F7BD3C81AAB199300DF71D9 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				9F7BD3CB1AAB212100DF71D9 /* GoogleMaps.bundle */,
 				9F7BD3C61AAB197500DF71D9 /* CoreText.framework */,
 				9F7BD3C41AAB196F00DF71D9 /* CoreLocation.framework */,
 				9F7BD3C21AAB196500DF71D9 /* SystemConfiguration.framework */,
@@ -263,6 +273,7 @@
 				9F5651F11AAAF5F80030886B /* Main.storyboard in Resources */,
 				9F5651F61AAAF5F80030886B /* LaunchScreen.xib in Resources */,
 				9F5651F31AAAF5F80030886B /* Images.xcassets in Resources */,
+				9F7BD3CC1AAB212100DF71D9 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +295,7 @@
 				9FC36B931AAB099300DD1575 /* SignUp.swift in Sources */,
 				9F5651EC1AAAF5F80030886B /* AppDelegate.swift in Sources */,
 				9F7BD3AA1AAB119600DF71D9 /* LogIn.swift in Sources */,
+				9F7BD3CA1AAB1ED100DF71D9 /* MapsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

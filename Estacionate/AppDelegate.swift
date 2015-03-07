@@ -12,11 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let googleMapsApiKey = "AIzaSyBOWyTu6by82duFDZlMrIjctwI23JF3QXM"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
-        
+        GMSServices.provideAPIKey(googleMapsApiKey)
         FBLoginView.self
         FBProfilePictureView.self
         
