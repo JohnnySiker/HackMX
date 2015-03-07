@@ -13,6 +13,8 @@
 		9F5651F31AAAF5F80030886B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5651F21AAAF5F80030886B /* Images.xcassets */; };
 		9F5651F61AAAF5F80030886B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5651F41AAAF5F80030886B /* LaunchScreen.xib */; };
 		9F5652021AAAF5F80030886B /* EstacionateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5652011AAAF5F80030886B /* EstacionateTests.swift */; };
+		9FC36B8E1AAB035900DD1575 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC36B8D1AAB035900DD1575 /* FacebookSDK.framework */; };
+		9FC36B931AAB099300DD1575 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC36B921AAB099300DD1575 /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 		9F5651FB1AAAF5F80030886B /* EstacionateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EstacionateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5652001AAAF5F80030886B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5652011AAAF5F80030886B /* EstacionateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstacionateTests.swift; sourceTree = "<group>"; };
+		9FC36B8D1AAB035900DD1575 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		9FC36B8F1AAB043300DD1575 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		9FC36B921AAB099300DD1575 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC36B8E1AAB035900DD1575 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,7 @@
 		9F5651DD1AAAF5F80030886B = {
 			isa = PBXGroup;
 			children = (
+				9FC36B8D1AAB035900DD1575 /* FacebookSDK.framework */,
 				9F5651E81AAAF5F80030886B /* Estacionate */,
 				9F5651FE1AAAF5F80030886B /* EstacionateTests */,
 				9F5651E71AAAF5F80030886B /* Products */,
@@ -79,10 +86,12 @@
 			children = (
 				9F5651EB1AAAF5F80030886B /* AppDelegate.swift */,
 				9F5651ED1AAAF5F80030886B /* ViewController.swift */,
+				9FC36B921AAB099300DD1575 /* SignUp.swift */,
 				9F5651EF1AAAF5F80030886B /* Main.storyboard */,
 				9F5651F21AAAF5F80030886B /* Images.xcassets */,
 				9F5651F41AAAF5F80030886B /* LaunchScreen.xib */,
 				9F5651E91AAAF5F80030886B /* Supporting Files */,
+				9FC36B8F1AAB043300DD1575 /* Bridge.h */,
 			);
 			path = Estacionate;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5651EE1AAAF5F80030886B /* ViewController.swift in Sources */,
+				9FC36B931AAB099300DD1575 /* SignUp.swift in Sources */,
 				9F5651EC1AAAF5F80030886B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,9 +346,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/JonathanVelazquez/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Estacionate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Estacionate/Bridge.h;
 			};
 			name = Debug;
 		};
@@ -346,9 +361,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/JonathanVelazquez/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Estacionate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Estacionate/Bridge.h;
 			};
 			name = Release;
 		};
@@ -405,6 +425,7 @@
 				9F5652071AAAF5F80030886B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F5652081AAAF5F80030886B /* Build configuration list for PBXNativeTarget "EstacionateTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +434,7 @@
 				9F56520A1AAAF5F80030886B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
