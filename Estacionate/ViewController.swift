@@ -13,7 +13,6 @@ class ViewController: UIViewController,FBLoginViewDelegate {
     @IBOutlet weak var fb_icon: FBLoginView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fb_icon.delegate = self
         fb_icon.readPermissions = ["public_profile", "email", "user_friends"]
         

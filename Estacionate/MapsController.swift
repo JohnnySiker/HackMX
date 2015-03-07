@@ -23,6 +23,7 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.hidden = true
 
         
         locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -225,6 +226,9 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     }
 
     
+    @IBAction func menu() {
+        self.sideMenuController()?.sideMenu?.toggleMenu()
+    }
 
    
 }
