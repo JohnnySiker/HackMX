@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F4555FF1AABD5460016422F /* CustomMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4555FE1AABD5460016422F /* CustomMainCell.swift */; };
+		7CDB23021AABF77800545F60 /* yips.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7CDB23011AABF77800545F60 /* yips.jpg */; };
+		7CDB23041AABF79600545F60 /* OptionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB23031AABF79600545F60 /* OptionsCell.swift */; };
+		7CDB23061AABF7A600545F60 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB23051AABF7A600545F60 /* Options.swift */; };
+		7CDB230B1AABF7B500545F60 /* CustomMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB23071AABF7B500545F60 /* CustomMainCell.swift */; };
+		7CDB230C1AABF7B500545F60 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB23081AABF7B500545F60 /* MainCell.swift */; };
+		7CDB230D1AABF7B500545F60 /* ViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB23091AABF7B500545F60 /* ViewCustomCell.swift */; };
+		7CDB230E1AABF7B500545F60 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB230A1AABF7B500545F60 /* MyMenuTableViewController.swift */; };
+		7CDB23121AABF7F000545F60 /* linea1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDB230F1AABF7F000545F60 /* linea1.png */; };
+		7CDB23131AABF7F000545F60 /* linea2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDB23101AABF7F000545F60 /* linea2.png */; };
+		7CDB23141AABF7F000545F60 /* linea3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDB23111AABF7F000545F60 /* linea3.png */; };
+		7CDB23161AABF80100545F60 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDB23151AABF80100545F60 /* FacebookSDK.framework */; };
+		7CDB23181AABF80A00545F60 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDB23171AABF80A00545F60 /* GoogleMaps.framework */; };
 		9F4556011AABE91F0016422F /* EstacionarmeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4556001AABE91F0016422F /* EstacionarmeController.swift */; };
 		9F4556071AABED7D0016422F /* ECell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4556061AABED7D0016422F /* ECell.swift */; };
 		9F5651EC1AAAF5F80030886B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5651EB1AAAF5F80030886B /* AppDelegate.swift */; };
@@ -17,7 +28,6 @@
 		9F5651F61AAAF5F80030886B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5651F41AAAF5F80030886B /* LaunchScreen.xib */; };
 		9F5652021AAAF5F80030886B /* EstacionateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5652011AAAF5F80030886B /* EstacionateTests.swift */; };
 		9F7BD3AA1AAB119600DF71D9 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD3A91AAB119600DF71D9 /* LogIn.swift */; };
-		9F7BD3AC1AAB185C00DF71D9 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3AB1AAB185C00DF71D9 /* GoogleMaps.framework */; };
 		9F7BD3B41AAB192900DF71D9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3AD1AAB18C900DF71D9 /* AVFoundation.framework */; };
 		9F7BD3B51AAB193100DF71D9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3AF1AAB18CD00DF71D9 /* CoreData.framework */; };
 		9F7BD3B71AAB193800DF71D9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3B61AAB193800DF71D9 /* GLKit.framework */; };
@@ -34,13 +44,9 @@
 		9F7BD3CE1AAB214400DF71D9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7BD3CD1AAB214400DF71D9 /* libz.dylib */; };
 		9F7BD3D01AAB5BD300DF71D9 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD3CF1AAB5BD300DF71D9 /* Ranking.swift */; };
 		9F7BD3D21AAB5EB100DF71D9 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD3D11AAB5EB100DF71D9 /* RankingCell.swift */; };
-		9F99ACCF1AABB46B0039DBDA /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99ACCE1AABB46B0039DBDA /* MyMenuTableViewController.swift */; };
-		9F99ACD11AABB4830039DBDA /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99ACD01AABB4830039DBDA /* MainCell.swift */; };
-		9F99ACD31AABB48D0039DBDA /* ViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99ACD21AABB48D0039DBDA /* ViewCustomCell.swift */; };
 		9F99ACD51AABB4A00039DBDA /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99ACD41AABB4A00039DBDA /* MyNavigationController.swift */; };
 		9F99ACD81AABB53F0039DBDA /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99ACD61AABB53F0039DBDA /* ENSideMenuNavigationController.swift */; };
 		9F99ACD91AABB53F0039DBDA /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99ACD71AABB53F0039DBDA /* ENSideMenu.swift */; };
-		9FC36B8E1AAB035900DD1575 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC36B8D1AAB035900DD1575 /* FacebookSDK.framework */; };
 		9FC36B931AAB099300DD1575 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC36B921AAB099300DD1575 /* SignUp.swift */; };
 		9FDC410A1AABF197009AB445 /* estacionarmelike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41091AABF197009AB445 /* estacionarmelike.png */; };
 		9FDC410D1AABF228009AB445 /* estacionarmeimagen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC410C1AABF228009AB445 /* estacionarmeimagen.png */; };
@@ -57,7 +63,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F4555FE1AABD5460016422F /* CustomMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMainCell.swift; sourceTree = "<group>"; };
+		7CDB23011AABF77800545F60 /* yips.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yips.jpg; sourceTree = "<group>"; };
+		7CDB23031AABF79600545F60 /* OptionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsCell.swift; sourceTree = "<group>"; };
+		7CDB23051AABF7A600545F60 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		7CDB23071AABF7B500545F60 /* CustomMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMainCell.swift; sourceTree = "<group>"; };
+		7CDB23081AABF7B500545F60 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		7CDB23091AABF7B500545F60 /* ViewCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustomCell.swift; sourceTree = "<group>"; };
+		7CDB230A1AABF7B500545F60 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
+		7CDB230F1AABF7F000545F60 /* linea1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linea1.png; sourceTree = "<group>"; };
+		7CDB23101AABF7F000545F60 /* linea2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linea2.png; sourceTree = "<group>"; };
+		7CDB23111AABF7F000545F60 /* linea3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linea3.png; sourceTree = "<group>"; };
+		7CDB23151AABF80100545F60 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		7CDB23171AABF80A00545F60 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../Documents/GoogleMaps-iOS-1.9.2/GoogleMaps.framework"; sourceTree = "<group>"; };
 		9F4556001AABE91F0016422F /* EstacionarmeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstacionarmeController.swift; sourceTree = "<group>"; };
 		9F4556061AABED7D0016422F /* ECell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECell.swift; sourceTree = "<group>"; };
 		9F5651E61AAAF5F80030886B /* Estacionate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Estacionate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +88,6 @@
 		9F5652001AAAF5F80030886B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5652011AAAF5F80030886B /* EstacionateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstacionateTests.swift; sourceTree = "<group>"; };
 		9F7BD3A91AAB119600DF71D9 /* LogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogIn.swift; path = Images.xcassets/LogIn.swift; sourceTree = "<group>"; };
-		9F7BD3AB1AAB185C00DF71D9 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../../Documents/GoogleMaps-iOS-1.9.2/GoogleMaps.framework"; sourceTree = "<group>"; };
 		9F7BD3AD1AAB18C900DF71D9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9F7BD3AF1AAB18CD00DF71D9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9F7BD3B61AAB193800DF71D9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -88,13 +104,9 @@
 		9F7BD3CD1AAB214400DF71D9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9F7BD3CF1AAB5BD300DF71D9 /* Ranking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		9F7BD3D11AAB5EB100DF71D9 /* RankingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
-		9F99ACCE1AABB46B0039DBDA /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
-		9F99ACD01AABB4830039DBDA /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
-		9F99ACD21AABB48D0039DBDA /* ViewCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustomCell.swift; sourceTree = "<group>"; };
 		9F99ACD41AABB4A00039DBDA /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		9F99ACD61AABB53F0039DBDA /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		9F99ACD71AABB53F0039DBDA /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
-		9FC36B8D1AAB035900DD1575 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		9FC36B8F1AAB043300DD1575 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		9FC36B921AAB099300DD1575 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		9FDC41091AABF197009AB445 /* estacionarmelike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionarmelike.png; sourceTree = "<group>"; };
@@ -117,9 +129,9 @@
 				9F7BD3B91AAB193E00DF71D9 /* ImageIO.framework in Frameworks */,
 				9F7BD3B71AAB193800DF71D9 /* GLKit.framework in Frameworks */,
 				9F7BD3B51AAB193100DF71D9 /* CoreData.framework in Frameworks */,
+				7CDB23161AABF80100545F60 /* FacebookSDK.framework in Frameworks */,
 				9F7BD3B41AAB192900DF71D9 /* AVFoundation.framework in Frameworks */,
-				9F7BD3AC1AAB185C00DF71D9 /* GoogleMaps.framework in Frameworks */,
-				9FC36B8E1AAB035900DD1575 /* FacebookSDK.framework in Frameworks */,
+				7CDB23181AABF80A00545F60 /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +148,10 @@
 		9F5651DD1AAAF5F80030886B = {
 			isa = PBXGroup;
 			children = (
+				7CDB23011AABF77800545F60 /* yips.jpg */,
+				7CDB230F1AABF7F000545F60 /* linea1.png */,
+				7CDB23101AABF7F000545F60 /* linea2.png */,
+				7CDB23111AABF7F000545F60 /* linea3.png */,
 				9F7BD3CD1AAB214400DF71D9 /* libz.dylib */,
 				9F7BD3C81AAB199300DF71D9 /* Framework */,
 				9F5651E81AAAF5F80030886B /* Estacionate */,
@@ -158,9 +174,11 @@
 			children = (
 				9F99ACCD1AABB45E0039DBDA /* Menu */,
 				9F5651EB1AAAF5F80030886B /* AppDelegate.swift */,
+				7CDB23051AABF7A600545F60 /* Options.swift */,
 				9F5651ED1AAAF5F80030886B /* ViewController.swift */,
 				9FC36B921AAB099300DD1575 /* SignUp.swift */,
 				9F7BD3A91AAB119600DF71D9 /* LogIn.swift */,
+				7CDB23031AABF79600545F60 /* OptionsCell.swift */,
 				9F7BD3C91AAB1ED100DF71D9 /* MapsController.swift */,
 				9F7BD3CF1AAB5BD300DF71D9 /* Ranking.swift */,
 				9F7BD3D11AAB5EB100DF71D9 /* RankingCell.swift */,
@@ -204,6 +222,8 @@
 		9F7BD3C81AAB199300DF71D9 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				7CDB23171AABF80A00545F60 /* GoogleMaps.framework */,
+				7CDB23151AABF80100545F60 /* FacebookSDK.framework */,
 				9F7BD3CB1AAB212100DF71D9 /* GoogleMaps.bundle */,
 				9F7BD3C61AAB197500DF71D9 /* CoreText.framework */,
 				9F7BD3C41AAB196F00DF71D9 /* CoreLocation.framework */,
@@ -216,8 +236,6 @@
 				9F7BD3B61AAB193800DF71D9 /* GLKit.framework */,
 				9F7BD3AF1AAB18CD00DF71D9 /* CoreData.framework */,
 				9F7BD3AD1AAB18C900DF71D9 /* AVFoundation.framework */,
-				9F7BD3AB1AAB185C00DF71D9 /* GoogleMaps.framework */,
-				9FC36B8D1AAB035900DD1575 /* FacebookSDK.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -226,12 +244,12 @@
 			isa = PBXGroup;
 			children = (
 				9F99ACD41AABB4A00039DBDA /* MyNavigationController.swift */,
+				7CDB23071AABF7B500545F60 /* CustomMainCell.swift */,
+				7CDB23081AABF7B500545F60 /* MainCell.swift */,
+				7CDB23091AABF7B500545F60 /* ViewCustomCell.swift */,
+				7CDB230A1AABF7B500545F60 /* MyMenuTableViewController.swift */,
 				9F99ACD61AABB53F0039DBDA /* ENSideMenuNavigationController.swift */,
 				9F99ACD71AABB53F0039DBDA /* ENSideMenu.swift */,
-				9F4555FE1AABD5460016422F /* CustomMainCell.swift */,
-				9F99ACD01AABB4830039DBDA /* MainCell.swift */,
-				9F99ACD21AABB48D0039DBDA /* ViewCustomCell.swift */,
-				9F99ACCE1AABB46B0039DBDA /* MyMenuTableViewController.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -328,9 +346,13 @@
 				9F5651F11AAAF5F80030886B /* Main.storyboard in Resources */,
 				9FDC410A1AABF197009AB445 /* estacionarmelike.png in Resources */,
 				9F5651F61AAAF5F80030886B /* LaunchScreen.xib in Resources */,
+				7CDB23021AABF77800545F60 /* yips.jpg in Resources */,
 				9F5651F31AAAF5F80030886B /* Images.xcassets in Resources */,
+				7CDB23141AABF7F000545F60 /* linea3.png in Resources */,
 				9F7BD3CC1AAB212100DF71D9 /* GoogleMaps.bundle in Resources */,
 				9FDC410D1AABF228009AB445 /* estacionarmeimagen.png in Resources */,
+				7CDB23121AABF7F000545F60 /* linea1.png in Resources */,
+				7CDB23131AABF7F000545F60 /* linea2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,18 +374,20 @@
 				9F99ACD51AABB4A00039DBDA /* MyNavigationController.swift in Sources */,
 				9F5651EE1AAAF5F80030886B /* ViewController.swift in Sources */,
 				9F99ACD91AABB53F0039DBDA /* ENSideMenu.swift in Sources */,
+				7CDB230E1AABF7B500545F60 /* MyMenuTableViewController.swift in Sources */,
+				7CDB23061AABF7A600545F60 /* Options.swift in Sources */,
 				9FC36B931AAB099300DD1575 /* SignUp.swift in Sources */,
+				7CDB23041AABF79600545F60 /* OptionsCell.swift in Sources */,
+				7CDB230B1AABF7B500545F60 /* CustomMainCell.swift in Sources */,
 				9F5651EC1AAAF5F80030886B /* AppDelegate.swift in Sources */,
-				9F99ACD31AABB48D0039DBDA /* ViewCustomCell.swift in Sources */,
-				9F4555FF1AABD5460016422F /* CustomMainCell.swift in Sources */,
 				9F7BD3AA1AAB119600DF71D9 /* LogIn.swift in Sources */,
-				9F99ACCF1AABB46B0039DBDA /* MyMenuTableViewController.swift in Sources */,
 				9F4556011AABE91F0016422F /* EstacionarmeController.swift in Sources */,
 				9F4556071AABED7D0016422F /* ECell.swift in Sources */,
 				9F7BD3D01AAB5BD300DF71D9 /* Ranking.swift in Sources */,
 				9F7BD3CA1AAB1ED100DF71D9 /* MapsController.swift in Sources */,
+				7CDB230C1AABF7B500545F60 /* MainCell.swift in Sources */,
+				7CDB230D1AABF7B500545F60 /* ViewCustomCell.swift in Sources */,
 				9F7BD3D21AAB5EB100DF71D9 /* RankingCell.swift in Sources */,
-				9F99ACD11AABB4830039DBDA /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +514,8 @@
 					"$(inherited)",
 					/Users/JonathanVelazquez/Documents/FacebookSDK,
 					"/Users/JonathanVelazquez/Documents/GoogleMaps-iOS-1.9.2",
+					/Users/aavalos/Documents/FacebookSDK,
+					"/Users/aavalos/Documents/GoogleMaps-iOS-1.9.2",
 				);
 				INFOPLIST_FILE = Estacionate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -507,6 +533,8 @@
 					"$(inherited)",
 					/Users/JonathanVelazquez/Documents/FacebookSDK,
 					"/Users/JonathanVelazquez/Documents/GoogleMaps-iOS-1.9.2",
+					/Users/aavalos/Documents/FacebookSDK,
+					"/Users/aavalos/Documents/GoogleMaps-iOS-1.9.2",
 				);
 				INFOPLIST_FILE = Estacionate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

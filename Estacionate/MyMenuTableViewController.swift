@@ -47,12 +47,12 @@ class MyMenuTableViewController: UITableViewController {
         case 0:
             var cell = CustomMainCell()
             cell.selectionStyle = .None
-            cell.setCell("circleProfileM", lbl_name:"Alejandro", lbl_last:"Zepeda",ranking:"Ranking: 57.4")
+            cell.setCell("yips.jpg", lbl_name:"Alejandro", lbl_last:"Zepeda",ranking:"Ranking: 57.4")
             return cell
         case 1:
             var cell = ViewCustomCell()
             cell.selectionStyle = .None
-            cell.setCell("", lbl_name:"Ranking",lbl_name2:"General")
+            cell.setCell("", lbl_name:"Ranking Gral",lbl_name2:"")
             return cell
         case 2:
             var cell = ViewCustomCell()
@@ -66,11 +66,6 @@ class MyMenuTableViewController: UITableViewController {
             cell.setCell("", lbl_name:"Cerrar Sesión",lbl_name2:"")
             return cell
             
-        case 4:
-            var cell = ViewCustomCell()
-            cell.selectionStyle = .None
-            cell.setCell("", lbl_name:"",lbl_name2:"")
-            return cell
             
         default:
             var default_cell = ViewCustomCell()
@@ -94,38 +89,42 @@ class MyMenuTableViewController: UITableViewController {
         selectedMenuItem = indexPath.row
         
         //Present new view controller
-        //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
         var destViewController : UIViewController
+        destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Map") as UIViewController
         
         switch(selectedMenuItem){
         case 0:
             println("0")
-            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("UserProfile") as UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("options") as UIViewController
+            sideMenuController()?.setContentViewController(destViewController)
+
             
         case 1:
             println("1")
-            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyPets") as UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("options") as UIViewController
+                sideMenuController()?.setContentViewController(destViewController)
+
             
         case 2:
             println("2")
-            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ChatSol") as UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("options") as
+            UIViewController
+            sideMenuController()?.setContentViewController(destViewController)
+
             
         case 3:
-            println("3")
-            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Likes") as UIViewController
-            
-        case 4:
-            println("4")
-            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Opciones") as UIViewController
-            
+            dismissViewControllerAnimated(true, completion: nil)
+            break
             
         default:
             println("Default")
-            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LogIn") as UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("options") as UIViewController
+            sideMenuController()?.setContentViewController(destViewController)
+
             break
             
         }
-        // sideMenuController()?.setContentViewController(destViewController)
     }
     
     
