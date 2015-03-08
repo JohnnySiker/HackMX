@@ -29,9 +29,13 @@ class ViewCustomCell: UITableViewCell {
         self.lbl_2.text = lbl_name2
         self.view.backgroundColor = UIColor.darkGrayColor()
         
-        self.lbl.frame = CGRect(x:45,y:15,width:150,height:30)
-        self.lbl_2.frame = CGRect(x: 65, y: 35, width: 150, height: 50)
+        self.lbl.frame = CGRect(x:50,y:25,width:170,height:30)
+        self.lbl_2.frame = CGRect(x: 65, y:25, width: 170, height: 30)
         self.view.frame = CGRect(x: 20, y: 5, width: 180, height: 2)
+        
+        self.lbl.font = UIFont(name: "Avenir next", size: 18)
+        
+        self.lbl_2.font = UIFont(name: "Avenir next", size: 18)
         
         self.contentView.addSubview(lbl)
         self.contentView.addSubview(lbl_2)

@@ -54,4 +54,9 @@ class Ranking: UIViewController,UITableViewDelegate, UITableViewDataSource{
         println(indexPath.row)
     }
 
+    @IBAction func back(sender: UIButton) {
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Map") as UIViewController
+        self.sideMenuController()?.setContentViewController(nView)
+        sideMenuController()?.sideMenu?.toggleMenu()
+    }
 }

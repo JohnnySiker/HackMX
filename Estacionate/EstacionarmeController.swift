@@ -39,6 +39,7 @@ class EstacionarmeController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     
+    
     func handleKeyboardWillHide(sender: NSNotification){
         
         self.view.frame.origin.y = 0
@@ -103,4 +104,33 @@ class EstacionarmeController: UIViewController,UITableViewDelegate,UITableViewDa
         return true
     }
   
+    @IBAction func back(sender: UIButton) {
+        
+        var refreshAlert = UIAlertController(title: "¿Cómo calificas el lugar donde te estacionaste?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Bueno", style: .Default, handler: { (action: UIAlertAction!) in
+            
+            let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Map") as UIViewController
+            self.sideMenuController()?.setContentViewController(nView)
+            self.sideMenuController()?.sideMenu?.toggleMenu()
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Malo", style: .Default, handler: { (action: UIAlertAction!) in
+                    }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancelar", style: .Cancel, handler: { (action: UIAlertAction!) in
+            println("Handle Cancel Logic here")
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
+     
+     
+    }
+    @IBAction func buscarCoche(sender: UIButton) {
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Desaparecido") as UIViewController
+        self.navigationController?.pushViewController(nView, animated: true)
+        self.sideMenuController()?.sideMenu?.hideSideMenu()
+        //self.sideMenuController()?.setContentViewController(nView)
+        //self.sideMenuController()?.sideMenu?.toggleMenu()
+    }
 }

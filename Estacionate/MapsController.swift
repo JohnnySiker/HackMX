@@ -14,6 +14,8 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var map: GMSMapView!
     var marker:GMSMarker!
     var camera:GMSCameraPosition!
+    @IBOutlet weak var btn_estacionarme: UIButton!
+    @IBOutlet weak var btn_toggleMenu: UIButton!
     
     var circle:GMSCircle!
     var circleCenter:CLLocationCoordinate2D!
@@ -25,7 +27,8 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
         super.viewDidLoad()
         self.navigationController?.navigationBar.hidden = true
 
-        
+        self.view.bringSubviewToFront(btn_estacionarme)
+        self.view.bringSubviewToFront(btn_toggleMenu)
         locationManager.distanceFilter = kCLDistanceFilterNone;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         
@@ -209,7 +212,7 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
         marker.position = position
         marker.title = "Hack CDMX"
         marker.snippet = "Clipp"
-        marker.icon = UIImage(named: "ccar.png")
+        marker.icon = UIImage(named: "estacionamiento2.png")
         marker.map = self.map
         
     }
@@ -224,11 +227,17 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
         
         circle.map = self.map
     }
-
+  
     
     @IBAction func menu() {
         self.sideMenuController()?.sideMenu?.toggleMenu()
     }
 
+    @IBAction func estacionarce() {
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as UIViewController
+        sideMenuController()?.sideMenu?.toggleMenu()
+        self.sideMenuController()?.setContentViewController(nView)
+        
+    }
    
 }
