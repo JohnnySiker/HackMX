@@ -38,9 +38,10 @@ class MaloController: UIViewController, UIScrollViewDelegate, UIPickerViewDelega
     
 
     @IBAction func Bueno(sender: UIButton) {
-        self.dismissViewControllerAnimated(false, completion: nil)
-        let view = self.storyboard?.instantiateViewControllerWithIdentifier("menu") as MyNavigationController
-        self.presentViewController(view, animated: true, completion: nil)
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Map") as UIViewController
+        dismissViewControllerAnimated(true, completion: nil)
+        self.sideMenuController()?.setContentViewController(nView)
+        self.sideMenuController()?.sideMenu?.toggleMenu()
     }
   
     @IBAction func malo(sender: UIButton) {

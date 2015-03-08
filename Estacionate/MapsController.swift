@@ -31,6 +31,7 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
         
         if(distancia == 0.0){
             distancia = 500.0
+            prefs.setInteger(500, forKey: "Distance")
         }
         
         self.navigationController?.navigationBar.hidden = true
@@ -363,8 +364,9 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
             }
             
         }
-        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as EstacionarmeController
-        self.presentViewController(nView, animated: true, completion: nil)
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as UIViewController
+        self.sideMenuController()?.setContentViewController(nView)
+        self.sideMenuController()?.sideMenu?.toggleMenu()
     }
    
 }

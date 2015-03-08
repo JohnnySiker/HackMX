@@ -83,9 +83,15 @@ class Desaparecido: UIViewController,UITextFieldDelegate {
     }
     
     
+    @IBAction func back(sender: UIButton) {
+        let view = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as UIViewController
+        self.sideMenuController()?.setContentViewController(view)
+        self.sideMenuController()?.sideMenu?.toggleMenu()
+    }
     
     
     @IBAction func refresh(sender: UIButton) {
+    
     }
 
     

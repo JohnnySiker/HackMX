@@ -156,7 +156,8 @@ class MyMenuTableViewController: UITableViewController,UIImagePickerControllerDe
 
             
         case 3:
-            dismissViewControllerAnimated(true, completion: nil)
+            let view = self.storyboard?.instantiateViewControllerWithIdentifier("Main") as ViewController
+            self.presentViewController(view, animated: true, completion: nil)
             break
             
         default:

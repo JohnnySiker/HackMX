@@ -27,6 +27,7 @@ class MyNavigationController: ENSideMenuNavigationController, ENSideMenuDelegate
         
         let view = storyboard?.instantiateViewControllerWithIdentifier("Map") as UIViewController
         self.sideMenuController()?.setContentViewController(view)
+        self.sideMenuController()?.sideMenu?.toggleMenu()
     }
     
     override func didReceiveMemoryWarning() {

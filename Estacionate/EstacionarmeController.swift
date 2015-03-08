@@ -226,6 +226,11 @@ class EstacionarmeController: UIViewController,UITableViewDelegate,UITableViewDa
         //cellTake()
     }
     
+    @IBAction func action_find(sender: UIButton) {
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Desaparecido") as UIViewController
+        self.sideMenuController()?.setContentViewController(nView)
+        self.sideMenuController()?.sideMenu?.toggleMenu()
+    }
     
    /* func imageWasSavedSuccessfully(image: UIImage,
         didFinishSavingWithError error: NSError!,

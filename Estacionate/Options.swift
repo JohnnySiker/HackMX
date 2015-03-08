@@ -14,16 +14,16 @@ class Options: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var lbl_distance: UILabel!
-    var distancia:Double!
+    var distancia:Float!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.slider.maximumValue = 3000
         self.slider.minimumValue = 50
-        distancia = Double(prefs.integerForKey("Distance"))
-        self.slider.value = Float(distancia * 2.0)*10
+        distancia = Float(prefs.integerForKey("Distance"))
         self.lbl_distance.text = "\(Int(self.slider.value)) m"
+        self.slider.value = Float(distancia)
         
         table.delegate = self
         table.dataSource = self
