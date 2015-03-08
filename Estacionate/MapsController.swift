@@ -9,6 +9,7 @@
 import UIKit
 
 class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDelegate {
+    let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
     
     @IBOutlet weak var map: GMSMapView!
@@ -19,12 +20,19 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     
     var circle:GMSCircle!
     var circleCenter:CLLocationCoordinate2D!
-    
+    var distancia:Double!
     let locationManager = CLLocationManager()
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.bringSubviewToFront(btn_toggleMenu)
+        distancia = Double(prefs.integerForKey("Distance"))
+        
+        if(distancia == 0.0){
+            distancia = 500.0
+        }
+        
         self.navigationController?.navigationBar.hidden = true
 
         self.view.bringSubviewToFront(btn_estacionarme)
@@ -46,6 +54,7 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
         
         println(location)
         
+ 
         camera = GMSCameraPosition.cameraWithLatitude(19.4410987, longitude: -99.1815764, zoom: 18, bearing: 30, viewingAngle: 40)
         
         marker.position = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
@@ -58,17 +67,7 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
         map.camera = camera
         //marker.map = map
         
-        
-        circleCenter = CLLocationCoordinate2D(latitude: 19.3218135, longitude: -99.1862229)
-        circle = GMSCircle(position: circleCenter, radius: 1000)
-        circle.fillColor = UIColor(red: 61/255, green: 125/255, blue: 187/255, alpha: 0.5)
-        circle.strokeColor = UIColor(red: 231/255, green: 231/255, blue: 231/255, alpha: 1)
-        circle.strokeWidth = 5
-        
-        circle.map = map
-        
         map.settings.myLocationButton = true
-        
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -87,44 +86,28 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        // 2
         if status == .AuthorizedWhenInUse {
             
-            // 3
             locationManager.startUpdatingLocation()
             
-            //4
             map.myLocationEnabled = true
             map.settings.myLocationButton = true
         }
     }
     
-    // 5
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations.first as? CLLocation {
-            
-            // 6
             map.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-            
-            // 7
             locationManager.stopUpdatingLocation()
         }
     }
     
     func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D) {
         
-        // 1
         let geocoder = GMSGeocoder()
-        
-        // 2
         geocoder.reverseGeocodeCoordinate(coordinate) { response , error in
             if let address = response?.firstResult() {
-                
-                // 3
                 let lines = address.lines as [String]
-                //self.adressLabel.text = join("\n", lines)
-                
-                // 4
                 UIView.animateWithDuration(0.25) {
                     self.view.layoutIfNeeded()
                 }
@@ -139,11 +122,11 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     func request(){
         var location = locationManager.location
         
-        var i = 2.0
-        var r = (i*1000.0)
-        dibujaGeoCerca(location.coordinate.latitude, lon: location.coordinate.longitude, radio:r)
+        var d = CLLocationDistance(distancia)
+        var r = (distancia/1000.0)
+        dibujaGeoCerca(location.coordinate.latitude, lon: location.coordinate.longitude, radio:d)
         
-        var post:NSString = "latitud=\(location.coordinate.latitude)&longitud=\(location.coordinate.longitude)&distancia=\(i)"
+        var post:NSString = "latitud=\(location.coordinate.latitude)&longitud=\(location.coordinate.longitude)&distancia=\(r)"
         
         NSLog("PostData: %@",post);
         
@@ -195,7 +178,6 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
                         println(lon)
                         let coord = CLLocationCoordinate2D(latitude: lat,longitude: lon)
                         dibujaMarcador(coord, tipo: type)
-                        //dibujaGeoCerca(lat, lon: lon, radio: 100)
                         c++
                     }
                     
@@ -304,9 +286,85 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     }
 
     @IBAction func estacionarce() {
-        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as UIViewController
-            self.sideMenuController()?.setContentViewController(nView)
-        self.sideMenuController()?.sideMenu?.toggleMenu()
+        requestEstacionar()
+    }
+    
+    func requestEstacionar(){
+        var location = locationManager.location
+        
+        var d = CLLocationDistance(distancia)
+        var r = (distancia/1000.0)
+        
+        var post:NSString = "latitud=\(location.coordinate.latitude)&longitud=\(location.coordinate.longitude)&distancia=\(r)&usuario=1"
+        
+        NSLog("PostData: %@",post);
+        
+        var url:NSURL = NSURL(string:"http://clipp.mx/estacionate/estacionar.php")!
+        
+        var postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
+        
+        var postLength:NSString = String( postData.length )
+        
+        var request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = postData
+        request.setValue(postLength, forHTTPHeaderField: "Content-Length")
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        
+        var reponseError: NSError?
+        var response: NSURLResponse?
+        
+        var urlData: NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse:&response, error:&reponseError)
+        
+        println("urldata \(urlData)")
+        
+        if ( urlData != nil ) {
+            let res = response as NSHTTPURLResponse!;
+            
+            NSLog("Response code: %ld", res.statusCode);
+            
+            if (res.statusCode >= 200 && res.statusCode < 300)
+            {
+                var responseData:NSString = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
+                
+                NSLog("Response ==> %@", responseData);
+                
+                var error: NSError?
+                
+                if !(responseData.isEqualToString("[]")){
+                    let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as NSDictionary
+                    
+                    prefs.setObject(jsonData, forKey: "JDATA")
+                    
+                    
+                    /*for i in jsonData{
+                    let jData = jsonData["noticia_\(c)"] as NSDictionary
+                    
+                    var tipo = (jData["tipo"] as NSString).integerValue
+                    var id = (jData["id"] as NSString).integerValue
+                    var msj = (jData["mensaje"] as NSString)
+                    var lat = (jData["latitud"] as NSString).doubleValue
+                    var lon = (jData["longitud"] as NSString).doubleValue
+                    var fecha = (jData["fecha"] as NSString)
+                    
+                    println("Latitud: \(lat)")
+                    println("Longitud: \(lon)")
+                    println("Tipo: \(tipo)")
+                    println("ID: \(id)")
+                    println("Mensaje: \(msj)")
+                    println("Fecha: \(fecha)")
+                    
+                    }*/
+                    
+                    
+                }
+                
+            }
+            
+        }
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as EstacionarmeController
+        self.presentViewController(nView, animated: true, completion: nil)
     }
    
 }

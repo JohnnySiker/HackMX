@@ -9,7 +9,7 @@
 import UIKit
 
 class LogIn: UIViewController,UITextFieldDelegate {
- 
+    let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet weak var tf_email: UITextField!
     
@@ -97,7 +97,8 @@ class LogIn: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func entrar() {
-        if (tf_email.text == "a" && tf_pass.text == "a") {
+        if (tf_email.text == "AlejandroZepeda" && tf_pass.text == "yips") {
+            prefs.setInteger(1, forKey: "ISLOGGEDIN")
             let nView = self.storyboard?.instantiateViewControllerWithIdentifier("menu") as MyNavigationController
             self.navigationController?.presentViewController(nView, animated: true,completion:nil)
             self.sideMenuController()?.sideMenu?.toggleMenu()

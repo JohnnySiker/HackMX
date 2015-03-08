@@ -12,6 +12,8 @@ class MyNavigationController: ENSideMenuNavigationController, ENSideMenuDelegate
     
     
     override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.alpha = 0
+
         sideMenu = ENSideMenu(sourceView: self.view, menuTableViewController: MyMenuTableViewController(),menuPosition:.Left)
         self.navigationController?.navigationBar.hidden = true
         //sideMenu?.delegate = self //optional

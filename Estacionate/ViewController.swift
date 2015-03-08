@@ -22,10 +22,21 @@ class ViewController: UIViewController,FBLoginViewDelegate {
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "a.jpg")!)
         
     }
+    
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.alpha = 0
+        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        //prefs.setInteger(0, forKey: "ISLOGGEDIN")
+        let isLoggedIn:Int = prefs.integerForKey("ISLOGGEDIN") as Int
+        
+        if (isLoggedIn > 0) {
+            println("Verbose")
+            println("Login: \(isLoggedIn)")
+            let view = self.storyboard?.instantiateViewControllerWithIdentifier("menu") as MyNavigationController
+            self.presentViewController(view, animated: true, completion: nil)
+            
+        }
     }
-    
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
         println("User: \(user)")

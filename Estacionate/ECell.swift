@@ -29,7 +29,10 @@ class ECell: UITableViewCell {
     }
     
     func setCell(news: String){
-        lb_news.text = news
+        
+            lb_news.text = news
+       
+        
     }
 
 }

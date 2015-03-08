@@ -38,11 +38,9 @@ class MaloController: UIViewController, UIScrollViewDelegate, UIPickerViewDelega
     
 
     @IBAction func Bueno(sender: UIButton) {
-        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Map") as UIViewController
         self.dismissViewControllerAnimated(false, completion: nil)
-
-        self.sideMenuController()?.setContentViewController(nView)
-        sideMenuController()?.sideMenu?.toggleMenu()
+        let view = self.storyboard?.instantiateViewControllerWithIdentifier("menu") as MyNavigationController
+        self.presentViewController(view, animated: true, completion: nil)
     }
   
     @IBAction func malo(sender: UIButton) {
@@ -63,6 +61,9 @@ class MaloController: UIViewController, UIScrollViewDelegate, UIPickerViewDelega
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    
+    
+    
     
     
     

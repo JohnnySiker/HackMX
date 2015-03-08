@@ -9,16 +9,21 @@
 import UIKit
 
 class Options: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var lbl_distance: UILabel!
+    var distancia:Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.slider.maximumValue = 1000
-        self.slider.minimumValue = 10
+        self.slider.maximumValue = 3000
+        self.slider.minimumValue = 50
+        distancia = Double(prefs.integerForKey("Distance"))
+        self.slider.value = Float(distancia * 2.0)*10
+        self.lbl_distance.text = "\(Int(self.slider.value)) m"
         
         table.delegate = self
         table.dataSource = self
@@ -81,7 +86,7 @@ class Options: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func action_slider(sender: UISlider) {
         self.lbl_distance.text = "\(Int(self.slider.value)) m"
-
+        prefs.setInteger(Int(self.slider.value), forKey: "Distance")
     }
 
     @IBAction func back(sender: UIButton) {
@@ -89,5 +94,7 @@ class Options: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.sideMenuController()?.setContentViewController(view)
         self.sideMenuController()?.sideMenu?.toggleMenu()
     }
+    
+    
     
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CM8-ib-lIF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -197,15 +198,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VK-jp-bm6">
-                                <rect key="frame" x="17" y="23" width="30" height="40"/>
-                                <state key="normal" backgroundImage="menu">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="menu" destination="qq6-LC-H5J" eventType="touchUpInside" id="mTV-NM-aoW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S20-WO-tCj">
                                 <rect key="frame" x="349" y="600" width="58" height="58"/>
                                 <state key="normal" backgroundImage="Logo-Estacionate-Cian2.png">
@@ -213,6 +205,15 @@
                                 </state>
                                 <connections>
                                     <action selector="estacionarce" destination="qq6-LC-H5J" eventType="touchUpInside" id="hzj-dZ-g9d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbu-gl-QOA">
+                                <rect key="frame" x="18" y="21" width="40" height="40"/>
+                                <state key="normal" backgroundImage="homeB.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menu" destination="qq6-LC-H5J" eventType="touchUpInside" id="F7T-92-M47"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-CR-u1q" customClass="GMSMapView">
@@ -225,13 +226,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="btn_estacionarme" destination="S20-WO-tCj" id="Sgk-1d-8si"/>
-                        <outlet property="btn_toggleMenu" destination="6VK-jp-bm6" id="dng-NS-4Si"/>
+                        <outlet property="btn_toggleMenu" destination="Vbu-gl-QOA" id="Bfz-Pd-44X"/>
                         <outlet property="map" destination="8yd-CR-u1q" id="Iu8-kD-Jog"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdY-aP-bBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872" y="1428"/>
+            <point key="canvasLocation" x="1872" y="1412"/>
         </scene>
         <!--Estacionarme Controller-->
         <scene sceneID="EbY-RS-dFO">
@@ -245,41 +246,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-6g-yzS">
-                                <rect key="frame" x="29" y="23" width="60" height="60"/>
-                                <state key="normal" backgroundImage="estacionarmevolante.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="hPg-aX-cAy" eventType="touchUpInside" id="Xp2-cg-r9P"/>
-                                    <segue destination="Eqt-Mg-bjb" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorView="YgL-6g-yzS" id="oWj-Dr-MBB">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVh-dZ-gK4">
-                                <rect key="frame" x="29" y="686" width="270" height="30"/>
-                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-AI-Gqh">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-AI-Gqh">
                                 <rect key="frame" x="315" y="686" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PF3-1t-5va"/>
+                                    <constraint firstAttribute="width" constant="30" id="jrk-04-7g8"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="estacionarmecamara.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctx-ma-Fos">
-                                <rect key="frame" x="333" y="23" width="60" height="60"/>
-                                <state key="normal" backgroundImage="Logo-Buscate-Cian.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
-                                    <action selector="buscarCoche:" destination="hPg-aX-cAy" eventType="touchUpInside" id="ms5-yz-38O"/>
+                                    <action selector="takePhoto:" destination="hPg-aX-cAy" eventType="touchUpInside" id="ElC-wr-y3T"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="95V-CF-K1v">
-                                <rect key="frame" x="0.0" y="88" width="414" height="583"/>
+                                <rect key="frame" x="0.0" y="91" width="414" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ECell" rowHeight="117" id="Y9o-Sc-7TU" customClass="ECell" customModule="Estacionate" customModuleProvider="target">
@@ -289,21 +270,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzN-ii-gTm">
-                                                    <rect key="frame" x="24" y="78" width="30" height="30"/>
+                                                    <rect key="frame" x="17" y="83" width="20" height="20"/>
                                                     <state key="normal" backgroundImage="estacionarmelike.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjG-Ks-qz7">
-                                                    <rect key="frame" x="84" y="79" width="100" height="30"/>
+                                                    <rect key="frame" x="55" y="79" width="73" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="Ver foto">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moW-Hv-kPL">
-                                                    <rect key="frame" x="262" y="78" width="132" height="30"/>
-                                                    <state key="normal" title="Reportar abuso">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -315,20 +290,28 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQf-bS-0Yv">
-                                                    <rect key="frame" x="58" y="83" width="24" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="40" y="83" width="20" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estacionarmeimagen.png" translatesAutoresizingMaskIntoConstraints="NO" id="rJz-6A-aRf">
-                                                    <rect key="frame" x="90" y="78" width="30" height="30"/>
+                                                    <rect key="frame" x="58" y="84" width="20" height="20"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linea" translatesAutoresizingMaskIntoConstraints="NO" id="Zss-Pm-9cu">
                                                     <rect key="frame" x="7" y="114" width="400" height="3"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estacionarmeabuso.png" translatesAutoresizingMaskIntoConstraints="NO" id="Atz-kg-ggi">
-                                                    <rect key="frame" x="262" y="84" width="20" height="20"/>
+                                                    <rect key="frame" x="327" y="101" width="10" height="10"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moW-Hv-kPL">
+                                                    <rect key="frame" x="319" y="91" width="82" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <state key="normal" title="Reportar abuso">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -340,8 +323,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-bW-FXa">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-bW-FXa">
                                 <rect key="frame" x="358" y="686" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H3B-iE-4kx"/>
+                                    <constraint firstAttribute="width" constant="30" id="ygs-4P-dhB"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="estacionarmeimagen.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -349,23 +336,70 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linea" translatesAutoresizingMaskIntoConstraints="NO" id="Ot1-QL-xJ0">
                                 <rect key="frame" x="0.0" y="670" width="414" height="4"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dh-zN-vkP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="24"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BOi-5D-IeG">
+                                <rect key="frame" x="-2" y="0.0" width="416" height="85.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linea" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-gK-oNe">
-                                        <rect key="frame" x="17" y="20" width="380" height="5"/>
-                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhb-MK-USa">
+                                        <rect key="frame" x="193" y="40" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3Do-0v-adG"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="UOe-NO-oxK"/>
+                                            <constraint firstAttribute="width" constant="30" id="eSd-4g-gI9"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="loF-Um-lur"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="estacionarmerefresh1.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctx-ma-Fos">
+                                        <rect key="frame" x="338" y="27" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="MXL-0e-CKN"/>
+                                            <constraint firstAttribute="height" constant="45" id="eoI-4O-QTY"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Logo-Buscate-Blanco.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buscarCoche:" destination="hPg-aX-cAy" eventType="touchUpInside" id="0KX-UK-D8S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-6g-yzS">
+                                        <rect key="frame" x="25" y="35" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="iiV-iF-RVG"/>
+                                            <constraint firstAttribute="height" constant="30" id="pse-Gt-Bnd"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="backmixB.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="back:" destination="hPg-aX-cAy" eventType="touchUpInside" id="Xp2-cg-r9P"/>
+                                            <segue destination="Eqt-Mg-bjb" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorView="YgL-6g-yzS" id="oWj-Dr-MBB">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.031372549020000001" green="0.73725490199999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="fhb-MK-USa" secondAttribute="centerX" id="60p-eE-PPm"/>
+                                    <constraint firstAttribute="height" constant="85.5" id="7ML-LV-43u"/>
+                                    <constraint firstItem="fhb-MK-USa" firstAttribute="centerY" secondItem="YgL-6g-yzS" secondAttribute="centerY" id="S9Z-de-lng"/>
+                                    <constraint firstItem="fhb-MK-USa" firstAttribute="centerY" secondItem="ctx-ma-Fos" secondAttribute="centerY" id="bFN-Zt-Gbh"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhb-MK-USa">
-                                <rect key="frame" x="192" y="38" width="30" height="30"/>
-                                <state key="normal" backgroundImage="estacionarmerefresh.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="¿Qué esta pasando?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVh-dZ-gK4">
+                                <rect key="frame" x="16" y="681" width="291" height="40"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BOi-5D-IeG" firstAttribute="top" secondItem="ucN-8E-RQ8" secondAttribute="topMargin" id="iLP-C7-WrM"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -375,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7Q-80-bVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2425" y="1428"/>
+            <point key="canvasLocation" x="2507" y="1428"/>
         </scene>
         <!--Desaparecido-->
         <scene sceneID="vjR-du-y4e">
@@ -524,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBS-Lq-jO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="1428"/>
+            <point key="canvasLocation" x="3002" y="1428"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="LXs-b1-n17">
@@ -633,12 +667,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ranking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxH-Kt-AKa">
-                                <rect key="frame" x="154" y="39" width="106" height="26.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pgO-HT-4eq">
                                 <rect key="frame" x="0.0" y="66" width="414" height="670"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -681,15 +709,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-3t-oVl">
-                                <rect key="frame" x="16" y="28" width="30" height="30"/>
-                                <state key="normal" backgroundImage="back.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="kZd-aw-yZg" eventType="touchUpInside" id="ewY-Xj-ibO"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-tk-sN1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="85.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ranking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxH-Kt-AKa">
+                                        <rect key="frame" x="154" y="43" width="106" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-3t-oVl">
+                                        <rect key="frame" x="16" y="42" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KgP-2v-kWK"/>
+                                            <constraint firstAttribute="width" constant="30" id="zgl-Ek-MwO"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="backBlanco.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="back:" destination="kZd-aw-yZg" eventType="touchUpInside" id="ewY-Xj-ibO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.031372549020000001" green="0.73725490199999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Rg8-3t-oVl" firstAttribute="top" secondItem="kJy-tk-sN1" secondAttribute="top" constant="42" id="NPg-af-fi4"/>
+                                    <constraint firstItem="kxH-Kt-AKa" firstAttribute="top" secondItem="kJy-tk-sN1" secondAttribute="top" constant="43" id="UAF-HR-YPa"/>
+                                    <constraint firstAttribute="centerX" secondItem="kxH-Kt-AKa" secondAttribute="centerX" id="mTP-ox-nPK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -745,23 +794,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-YR-TSM">
-                                <rect key="frame" x="161" y="21" width="93" height="21"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfI-uD-ZsX">
-                                <rect key="frame" x="16" y="28" width="30" height="30"/>
-                                <state key="normal" backgroundImage="back.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="ZcR-VE-Dtk" eventType="touchUpInside" id="ScA-eR-92M"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wHv-sY-igE">
                                 <rect key="frame" x="36" y="312" width="275" height="31"/>
+                                <color key="tintColor" red="0.031372549020000001" green="0.73725490199999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="action_slider:" destination="ZcR-VE-Dtk" eventType="valueChanged" id="Wzn-8i-Dr1"/>
                                 </connections>
@@ -789,7 +824,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linea" translatesAutoresizingMaskIntoConstraints="NO" id="T1F-ET-mIE">
-                                                    <rect key="frame" x="19" y="0.0" width="380" height="4.5"/>
+                                                    <rect key="frame" x="19" y="0.0" width="380" height="1"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kl-af-Py3">
                                                     <rect key="frame" x="19" y="20" width="375" height="26"/>
@@ -805,8 +840,42 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo-Estacionate.png" translatesAutoresizingMaskIntoConstraints="NO" id="K7A-qA-nQe">
-                                <rect key="frame" x="107" y="60" width="200" height="200"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZj-o1-ntW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfI-uD-ZsX">
+                                        <rect key="frame" x="27" y="44" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="4k6-GE-7Sv"/>
+                                            <constraint firstAttribute="height" constant="30" id="RyZ-7x-Ck0"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="backBlanco.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="back:" destination="ZcR-VE-Dtk" eventType="touchUpInside" id="ScA-eR-92M"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Opciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-YR-TSM">
+                                        <rect key="frame" x="149" y="43" width="116" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.031372549020000001" green="0.73725490199999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EfI-uD-ZsX" firstAttribute="top" secondItem="sZj-o1-ntW" secondAttribute="top" constant="42" id="GgO-3S-0t3"/>
+                                    <constraint firstItem="JnX-YR-TSM" firstAttribute="top" secondItem="sZj-o1-ntW" secondAttribute="top" constant="43" id="i7Y-qf-ao5"/>
+                                    <constraint firstAttribute="centerX" secondItem="JnX-YR-TSM" secondAttribute="centerX" id="jHH-iW-ZJQ"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Logo-Estacionate-Cian2.png" translatesAutoresizingMaskIntoConstraints="NO" id="arc-71-iwF">
+                                <rect key="frame" x="107" y="99" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Tfj-Um-kRh"/>
+                                    <constraint firstAttribute="width" constant="200" id="hNl-wS-LdN"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -820,7 +889,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNc-cp-Ou9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="621"/>
+            <point key="canvasLocation" x="2900" y="616.25"/>
         </scene>
         <!--Malo Controller-->
         <scene sceneID="i4O-en-VME">
@@ -882,18 +951,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo-Buscate-Cian.png" width="1024" height="1024"/>
+        <image name="Logo-Buscate-Blanco.png" width="1088" height="1088"/>
         <image name="Logo-Estacionate-Cian2.png" width="1088" height="1088"/>
-        <image name="Logo-Estacionate.png" width="256" height="256"/>
         <image name="autodesaparecido.png" width="350" height="181"/>
-        <image name="back.png" width="128" height="128"/>
+        <image name="backBlanco.png" width="256" height="256"/>
+        <image name="backmixB.png" width="400" height="250"/>
         <image name="estacionarmeabuso.png" width="128" height="128"/>
         <image name="estacionarmecamara.png" width="256" height="256"/>
         <image name="estacionarmeimagen.png" width="512" height="512"/>
         <image name="estacionarmelike.png" width="256" height="256"/>
         <image name="estacionarmerefresh.png" width="128" height="128"/>
-        <image name="estacionarmevolante.png" width="256" height="256"/>
+        <image name="estacionarmerefresh1.png" width="128" height="128"/>
+        <image name="homeB.png" width="100" height="100"/>
         <image name="linea" width="400" height="3"/>
-        <image name="menu" width="32" height="32"/>
     </resources>
 </document>
