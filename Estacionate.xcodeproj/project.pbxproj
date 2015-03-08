@@ -44,6 +44,11 @@
 		9FC36B931AAB099300DD1575 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC36B921AAB099300DD1575 /* SignUp.swift */; };
 		9FDC410A1AABF197009AB445 /* estacionarmelike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41091AABF197009AB445 /* estacionarmelike.png */; };
 		9FDC410D1AABF228009AB445 /* estacionarmeimagen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC410C1AABF228009AB445 /* estacionarmeimagen.png */; };
+		9FDC410F1AABF3FD009AB445 /* estacionarmeabuso.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC410E1AABF3FD009AB445 /* estacionarmeabuso.png */; };
+		9FDC41111AABF4CA009AB445 /* estacionarmevolante.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41101AABF4CA009AB445 /* estacionarmevolante.png */; };
+		9FDC41131AABF4D1009AB445 /* homeestacionate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41121AABF4D1009AB445 /* homeestacionate.png */; };
+		9FDC41151AABF5BB009AB445 /* estacionarmecamara.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41141AABF5BB009AB445 /* estacionarmecamara.png */; };
+		9FDC41171AABF7C8009AB445 /* estacionarmerefresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41161AABF7C8009AB445 /* estacionarmerefresh.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +104,11 @@
 		9FC36B921AAB099300DD1575 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		9FDC41091AABF197009AB445 /* estacionarmelike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionarmelike.png; sourceTree = "<group>"; };
 		9FDC410C1AABF228009AB445 /* estacionarmeimagen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionarmeimagen.png; sourceTree = "<group>"; };
+		9FDC410E1AABF3FD009AB445 /* estacionarmeabuso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionarmeabuso.png; sourceTree = "<group>"; };
+		9FDC41101AABF4CA009AB445 /* estacionarmevolante.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionarmevolante.png; sourceTree = "<group>"; };
+		9FDC41121AABF4D1009AB445 /* homeestacionate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeestacionate.png; sourceTree = "<group>"; };
+		9FDC41141AABF5BB009AB445 /* estacionarmecamara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionarmecamara.png; sourceTree = "<group>"; };
+		9FDC41161AABF7C8009AB445 /* estacionarmerefresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionarmerefresh.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,7 +250,12 @@
 			isa = PBXGroup;
 			children = (
 				9FDC410C1AABF228009AB445 /* estacionarmeimagen.png */,
+				9FDC41141AABF5BB009AB445 /* estacionarmecamara.png */,
 				9FDC41091AABF197009AB445 /* estacionarmelike.png */,
+				9FDC41161AABF7C8009AB445 /* estacionarmerefresh.png */,
+				9FDC41121AABF4D1009AB445 /* homeestacionate.png */,
+				9FDC410E1AABF3FD009AB445 /* estacionarmeabuso.png */,
+				9FDC41101AABF4CA009AB445 /* estacionarmevolante.png */,
 			);
 			name = Img;
 			sourceTree = "<group>";
@@ -326,11 +341,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5651F11AAAF5F80030886B /* Main.storyboard in Resources */,
+				9FDC41151AABF5BB009AB445 /* estacionarmecamara.png in Resources */,
 				9FDC410A1AABF197009AB445 /* estacionarmelike.png in Resources */,
+				9FDC41171AABF7C8009AB445 /* estacionarmerefresh.png in Resources */,
+				9FDC41131AABF4D1009AB445 /* homeestacionate.png in Resources */,
 				9F5651F61AAAF5F80030886B /* LaunchScreen.xib in Resources */,
 				9F5651F31AAAF5F80030886B /* Images.xcassets in Resources */,
 				9F7BD3CC1AAB212100DF71D9 /* GoogleMaps.bundle in Resources */,
 				9FDC410D1AABF228009AB445 /* estacionarmeimagen.png in Resources */,
+				9FDC41111AABF4CA009AB445 /* estacionarmevolante.png in Resources */,
+				9FDC410F1AABF3FD009AB445 /* estacionarmeabuso.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

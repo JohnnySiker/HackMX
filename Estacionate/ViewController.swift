@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController,FBLoginViewDelegate {
 
+    
+    
     @IBOutlet weak var fb_icon: FBLoginView!
     override func viewDidLoad() {
         super.viewDidLoad()
