@@ -139,7 +139,7 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     func request(){
         var location = locationManager.location
         
-        var i = 1.0
+        var i = 2.0
         var r = (i*1000.0)
         dibujaGeoCerca(location.coordinate.latitude, lon: location.coordinate.longitude, radio:r)
         
@@ -190,10 +190,11 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
                         println("verbose")
                         var lat = (jData["latitud"] as NSString).doubleValue
                         var lon = (jData["longitud"] as NSString).doubleValue
+                        var type = (jData["tipo"] as NSString).integerValue
                         println(lat)
                         println(lon)
                         let coord = CLLocationCoordinate2D(latitude: lat,longitude: lon)
-                        dibujaMarcador(coord, tipo: 1)
+                        dibujaMarcador(coord, tipo: type)
                         //dibujaGeoCerca(lat, lon: lon, radio: 100)
                         c++
                     }
@@ -208,13 +209,82 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
     }
     
     func dibujaMarcador(position:CLLocationCoordinate2D,tipo:Int){
-        var marker = GMSMarker()
-        marker.position = position
-        marker.title = "Hack CDMX"
-        marker.snippet = "Clipp"
-        marker.icon = UIImage(named: "estacionamiento2.png")
-        marker.map = self.map
         
+        var marker = GMSMarker()
+       
+        
+        switch tipo {
+        case 1:
+            marker.position = position
+            marker.title = "Estacionamiento público"
+            marker.snippet = ""
+            marker.icon = UIImage(named: "estacionamiento.png")
+            break
+        case 2:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "autopartes.png")
+            break
+        case 3:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "bote.png")
+            break
+        case 4:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "franelero.png")
+            break
+        case 5:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "grua.png")
+            break
+        case 6:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "araña")
+            break
+        case 7:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "noestacionarse.png")
+            break
+        case 8:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "parquimetro.png")
+            break
+        case 9:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "reservados.png")
+            break
+        case 10:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "robo.png")
+            break
+        case 11:
+            marker.position = position
+            marker.title = "Hack CDMX"
+            marker.snippet = "Clipp"
+            marker.icon = UIImage(named: "vandalismo.png")
+            break
+        default:
+            break
+        }
+       
+        marker.map = self.map
     }
     
     func dibujaGeoCerca(lat:CLLocationDegrees,lon:CLLocationDegrees,radio:CLLocationDistance){
@@ -235,9 +305,8 @@ class MapsController: UIViewController,GMSMapViewDelegate, CLLocationManagerDele
 
     @IBAction func estacionarce() {
         let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as UIViewController
-        sideMenuController()?.sideMenu?.toggleMenu()
-        self.sideMenuController()?.setContentViewController(nView)
-        
+            self.sideMenuController()?.setContentViewController(nView)
+        self.sideMenuController()?.sideMenu?.toggleMenu()
     }
    
 }

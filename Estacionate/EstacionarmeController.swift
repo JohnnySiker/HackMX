@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EstacionarmeController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
+class EstacionarmeController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var tf_public: UITextField!
     @IBOutlet weak var tb_timeLine: UITableView!
@@ -106,30 +106,24 @@ class EstacionarmeController: UIViewController,UITableViewDelegate,UITableViewDa
   
     @IBAction func back(sender: UIButton) {
         
-        var refreshAlert = UIAlertController(title: "¿Cómo calificas el lugar donde te estacionaste?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-
-        refreshAlert.addAction(UIAlertAction(title: "Bueno", style: .Default, handler: { (action: UIAlertAction!) in
-            
-            let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Map") as UIViewController
-            self.sideMenuController()?.setContentViewController(nView)
-            self.sideMenuController()?.sideMenu?.toggleMenu()
-        }))
-        
-        refreshAlert.addAction(UIAlertAction(title: "Malo", style: .Default, handler: { (action: UIAlertAction!) in
-                    }))
-        
-        refreshAlert.addAction(UIAlertAction(title: "Cancelar", style: .Cancel, handler: { (action: UIAlertAction!) in
-            println("Handle Cancel Logic here")
-        }))
-        
-        presentViewController(refreshAlert, animated: true, completion: nil)
-     
-     
+                            
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "popoverSegue" {
+            let popoverViewController = segue.destinationViewController as UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+    }
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+    
+    
     @IBAction func buscarCoche(sender: UIButton) {
         let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Desaparecido") as UIViewController
         self.navigationController?.pushViewController(nView, animated: true)
-        self.sideMenuController()?.sideMenu?.hideSideMenu()
         //self.sideMenuController()?.setContentViewController(nView)
         //self.sideMenuController()?.sideMenu?.toggleMenu()
     }

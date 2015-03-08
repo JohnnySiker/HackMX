@@ -17,7 +17,9 @@ class ViewController: UIViewController,FBLoginViewDelegate {
         super.viewDidLoad()
         fb_icon.delegate = self
         fb_icon.readPermissions = ["public_profile", "email", "user_friends"]
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "a.jpg")!)
+        self.navigationController?.navigationBar.alpha = 0
+        
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "a.jpg")!)
         
     }
     override func viewWillAppear(animated: Bool) {

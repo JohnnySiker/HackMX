@@ -26,16 +26,14 @@ class CustomMainCell: UITableViewCell {
         self.lbl_name = UILabel()
         self.lbl_ranking = UILabel()
         
-        self.iv_user.layer.cornerRadius = self.iv_user.frame.size.width / 2
+        self.iv_user.layer.cornerRadius = 65
         self.iv_user.clipsToBounds = true
-
         self.iv_user.layer.borderWidth = 1.5 as CGFloat
         self.iv_user.layer.borderColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 0.8).CGColor
-        
         self.backgroundColor = UIColor.clearColor()
         
-        self.iv_user.frame = CGRect(x: 45,y: -10,width: 130,height: 190)
-        self.lbl_name.frame = CGRect(x: 55,y: 140,width: 180,height: 120)
+        self.iv_user.frame = CGRect(x: 45,y: -10,width: 130,height: 130)
+        self.lbl_name.frame = CGRect(x: 55,y: 140,width: 120,height: 120)
         self.lbl_lastName.frame = CGRect(x: 65, y: 170, width: 180, height: 120)
         self.lbl_ranking.frame = CGRect(x: 55, y: 250, width: 180, height: 45)
         

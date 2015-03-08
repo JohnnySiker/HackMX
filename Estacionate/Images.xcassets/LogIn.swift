@@ -100,6 +100,7 @@ class LogIn: UIViewController,UITextFieldDelegate {
         if (tf_email.text == "a" && tf_pass.text == "a") {
             let nView = self.storyboard?.instantiateViewControllerWithIdentifier("menu") as MyNavigationController
             self.navigationController?.presentViewController(nView, animated: true,completion:nil)
+            self.sideMenuController()?.sideMenu?.toggleMenu()
         }else{
             println("error")
         }

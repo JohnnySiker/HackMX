@@ -46,7 +46,7 @@ class SignUp: UIViewController,UITextFieldDelegate {
     
     
     func handleKeyboardWillShow(notification: NSNotification){
-        self.view.frame.origin.y = -210
+        self.view.frame.origin.y = -260
         
     }
     
@@ -104,9 +104,9 @@ class SignUp: UIViewController,UITextFieldDelegate {
 
     
     @IBAction func registro() {
-        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as EstacionarmeController
-        self.navigationController?.pushViewController(nView, animated: true)
-
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("menu") as MyNavigationController
+        self.navigationController?.presentViewController(nView, animated: true,completion:nil)
+        self.sideMenuController()?.sideMenu?.toggleMenu()
     }
     
 }

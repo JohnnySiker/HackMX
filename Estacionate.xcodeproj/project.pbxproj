@@ -56,16 +56,40 @@
 		9FDC412A1AAC0658009AB445 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41281AAC0658009AB445 /* back.png */; };
 		9FDC412B1AAC0658009AB445 /* continue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41291AAC0658009AB445 /* continue.png */; };
 		9FDC412D1AAC065F009AB445 /* estacionarmecomentario.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC412C1AAC065F009AB445 /* estacionarmecomentario.png */; };
-		9FDC41311AAC22B5009AB445 /* estacionamiento.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC412E1AAC22B5009AB445 /* estacionamiento.png */; };
-		9FDC41321AAC22B5009AB445 /* grua.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC412F1AAC22B5009AB445 /* grua.png */; };
-		9FDC41331AAC22B5009AB445 /* robo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41301AAC22B5009AB445 /* robo.png */; };
-		9FDC41381AAC2747009AB445 /* estacionamiento2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41361AAC2747009AB445 /* estacionamiento2.png */; };
-		9FDC41391AAC2747009AB445 /* robo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41371AAC2747009AB445 /* robo2.png */; };
 		9FDC413B1AAC2D03009AB445 /* autodesaparecido.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC413A1AAC2D03009AB445 /* autodesaparecido.png */; };
 		9FDC413D1AAC2E78009AB445 /* Desaparecido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC413C1AAC2E78009AB445 /* Desaparecido.swift */; };
 		9FDC41401AAC3213009AB445 /* Logo-Buscate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC413E1AAC3213009AB445 /* Logo-Buscate.png */; };
-		9FDC41411AAC3213009AB445 /* Logo-Estacionate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC413F1AAC3213009AB445 /* Logo-Estacionate.png */; };
-		9FDC41451AAC3BC4009AB445 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41441AAC3BC4009AB445 /* a.png */; };
+		9FDC41471AAC40D2009AB445 /* Logo-Estacionate-Azul.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41461AAC40D2009AB445 /* Logo-Estacionate-Azul.png */; };
+		9FDC41491AAC4126009AB445 /* Tipo-Estacionate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41481AAC4126009AB445 /* Tipo-Estacionate.png */; };
+		9FDC414D1AAC4A7F009AB445 /* Logo-Estacionate-Blanco.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC414C1AAC4A7F009AB445 /* Logo-Estacionate-Blanco.png */; };
+		9FDC414F1AAC5046009AB445 /* Logo-Estacionate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC414E1AAC5046009AB445 /* Logo-Estacionate.png */; };
+		9FDC41641AAC50B9009AB445 /* araña.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41501AAC50B9009AB445 /* araña.png */; };
+		9FDC41651AAC50B9009AB445 /* araña.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41511AAC50B9009AB445 /* araña.psd */; };
+		9FDC41661AAC50B9009AB445 /* autopartes.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41521AAC50B9009AB445 /* autopartes.png */; };
+		9FDC41671AAC50B9009AB445 /* autopartes.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41531AAC50B9009AB445 /* autopartes.psd */; };
+		9FDC41681AAC50B9009AB445 /* bote.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41541AAC50B9009AB445 /* bote.png */; };
+		9FDC41691AAC50B9009AB445 /* bote.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41551AAC50B9009AB445 /* bote.psd */; };
+		9FDC416A1AAC50B9009AB445 /* estacionamiento.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41561AAC50B9009AB445 /* estacionamiento.png */; };
+		9FDC416B1AAC50B9009AB445 /* estacionamiento.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41571AAC50B9009AB445 /* estacionamiento.psd */; };
+		9FDC416C1AAC50B9009AB445 /* franelero.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41581AAC50B9009AB445 /* franelero.png */; };
+		9FDC416D1AAC50B9009AB445 /* franelero.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41591AAC50B9009AB445 /* franelero.psd */; };
+		9FDC416E1AAC50B9009AB445 /* grua.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC415A1AAC50B9009AB445 /* grua.png */; };
+		9FDC416F1AAC50B9009AB445 /* grua.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC415B1AAC50B9009AB445 /* grua.psd */; };
+		9FDC41701AAC50B9009AB445 /* noestacionarse.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC415C1AAC50B9009AB445 /* noestacionarse.png */; };
+		9FDC41711AAC50B9009AB445 /* noestacionarse.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC415D1AAC50B9009AB445 /* noestacionarse.psd */; };
+		9FDC41721AAC50B9009AB445 /* parquimetro.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC415E1AAC50B9009AB445 /* parquimetro.png */; };
+		9FDC41731AAC50B9009AB445 /* parquimetro.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC415F1AAC50B9009AB445 /* parquimetro.psd */; };
+		9FDC41741AAC50B9009AB445 /* reservados.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41601AAC50B9009AB445 /* reservados.png */; };
+		9FDC41751AAC50B9009AB445 /* reservados.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41611AAC50B9009AB445 /* reservados.psd */; };
+		9FDC41761AAC50B9009AB445 /* robo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41621AAC50B9009AB445 /* robo.png */; };
+		9FDC41771AAC50B9009AB445 /* robo.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41631AAC50B9009AB445 /* robo.psd */; };
+		9FDC41791AAC530E009AB445 /* Logo-Estacionate-Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41781AAC530E009AB445 /* Logo-Estacionate-Red.png */; };
+		9FDC417B1AAC53D2009AB445 /* Logo-Estacionate-Cian.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC417A1AAC53D2009AB445 /* Logo-Estacionate-Cian.png */; };
+		9FDC417D1AAC54B6009AB445 /* Logo-Estacionate-Cian2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC417C1AAC54B6009AB445 /* Logo-Estacionate-Cian2.png */; };
+		9FDC417F1AAC59E7009AB445 /* Logo-Estacionate-Sombra.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC417E1AAC59E7009AB445 /* Logo-Estacionate-Sombra.png */; };
+		9FDC41811AAC9D10009AB445 /* Logo-Buscate-Cian.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41801AAC9D10009AB445 /* Logo-Buscate-Cian.png */; };
+		9FDC41831AAC9E6F009AB445 /* MaloController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC41821AAC9E6F009AB445 /* MaloController.swift */; };
+		9FDC41851AACB6C1009AB445 /* vandalismo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC41841AACB6C1009AB445 /* vandalismo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,16 +157,40 @@
 		9FDC41281AAC0658009AB445 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		9FDC41291AAC0658009AB445 /* continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue.png; sourceTree = "<group>"; };
 		9FDC412C1AAC065F009AB445 /* estacionarmecomentario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionarmecomentario.png; sourceTree = "<group>"; };
-		9FDC412E1AAC22B5009AB445 /* estacionamiento.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionamiento.png; sourceTree = "<group>"; };
-		9FDC412F1AAC22B5009AB445 /* grua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grua.png; sourceTree = "<group>"; };
-		9FDC41301AAC22B5009AB445 /* robo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robo.png; sourceTree = "<group>"; };
-		9FDC41361AAC2747009AB445 /* estacionamiento2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionamiento2.png; sourceTree = "<group>"; };
-		9FDC41371AAC2747009AB445 /* robo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robo2.png; sourceTree = "<group>"; };
 		9FDC413A1AAC2D03009AB445 /* autodesaparecido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autodesaparecido.png; sourceTree = "<group>"; };
 		9FDC413C1AAC2E78009AB445 /* Desaparecido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Desaparecido.swift; sourceTree = "<group>"; };
 		9FDC413E1AAC3213009AB445 /* Logo-Buscate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Buscate.png"; sourceTree = "<group>"; };
-		9FDC413F1AAC3213009AB445 /* Logo-Estacionate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Estacionate.png"; sourceTree = "<group>"; };
-		9FDC41441AAC3BC4009AB445 /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
+		9FDC41461AAC40D2009AB445 /* Logo-Estacionate-Azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Estacionate-Azul.png"; sourceTree = "<group>"; };
+		9FDC41481AAC4126009AB445 /* Tipo-Estacionate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tipo-Estacionate.png"; sourceTree = "<group>"; };
+		9FDC414C1AAC4A7F009AB445 /* Logo-Estacionate-Blanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Estacionate-Blanco.png"; sourceTree = "<group>"; };
+		9FDC414E1AAC5046009AB445 /* Logo-Estacionate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Estacionate.png"; sourceTree = "<group>"; };
+		9FDC41501AAC50B9009AB445 /* araña.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "araña.png"; sourceTree = "<group>"; };
+		9FDC41511AAC50B9009AB445 /* araña.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "araña.psd"; sourceTree = "<group>"; };
+		9FDC41521AAC50B9009AB445 /* autopartes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autopartes.png; sourceTree = "<group>"; };
+		9FDC41531AAC50B9009AB445 /* autopartes.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = autopartes.psd; sourceTree = "<group>"; };
+		9FDC41541AAC50B9009AB445 /* bote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bote.png; sourceTree = "<group>"; };
+		9FDC41551AAC50B9009AB445 /* bote.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = bote.psd; sourceTree = "<group>"; };
+		9FDC41561AAC50B9009AB445 /* estacionamiento.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estacionamiento.png; sourceTree = "<group>"; };
+		9FDC41571AAC50B9009AB445 /* estacionamiento.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = estacionamiento.psd; sourceTree = "<group>"; };
+		9FDC41581AAC50B9009AB445 /* franelero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = franelero.png; sourceTree = "<group>"; };
+		9FDC41591AAC50B9009AB445 /* franelero.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = franelero.psd; sourceTree = "<group>"; };
+		9FDC415A1AAC50B9009AB445 /* grua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grua.png; sourceTree = "<group>"; };
+		9FDC415B1AAC50B9009AB445 /* grua.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = grua.psd; sourceTree = "<group>"; };
+		9FDC415C1AAC50B9009AB445 /* noestacionarse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noestacionarse.png; sourceTree = "<group>"; };
+		9FDC415D1AAC50B9009AB445 /* noestacionarse.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = noestacionarse.psd; sourceTree = "<group>"; };
+		9FDC415E1AAC50B9009AB445 /* parquimetro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parquimetro.png; sourceTree = "<group>"; };
+		9FDC415F1AAC50B9009AB445 /* parquimetro.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = parquimetro.psd; sourceTree = "<group>"; };
+		9FDC41601AAC50B9009AB445 /* reservados.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reservados.png; sourceTree = "<group>"; };
+		9FDC41611AAC50B9009AB445 /* reservados.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = reservados.psd; sourceTree = "<group>"; };
+		9FDC41621AAC50B9009AB445 /* robo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robo.png; sourceTree = "<group>"; };
+		9FDC41631AAC50B9009AB445 /* robo.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = robo.psd; sourceTree = "<group>"; };
+		9FDC41781AAC530E009AB445 /* Logo-Estacionate-Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Estacionate-Red.png"; sourceTree = "<group>"; };
+		9FDC417A1AAC53D2009AB445 /* Logo-Estacionate-Cian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Estacionate-Cian.png"; sourceTree = "<group>"; };
+		9FDC417C1AAC54B6009AB445 /* Logo-Estacionate-Cian2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Estacionate-Cian2.png"; sourceTree = "<group>"; };
+		9FDC417E1AAC59E7009AB445 /* Logo-Estacionate-Sombra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Estacionate-Sombra.png"; sourceTree = "<group>"; };
+		9FDC41801AAC9D10009AB445 /* Logo-Buscate-Cian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Buscate-Cian.png"; sourceTree = "<group>"; };
+		9FDC41821AAC9E6F009AB445 /* MaloController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaloController.swift; sourceTree = "<group>"; };
+		9FDC41841AACB6C1009AB445 /* vandalismo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vandalismo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,11 +254,10 @@
 				9F5651EB1AAAF5F80030886B /* AppDelegate.swift */,
 				9FDC411A1AAC0052009AB445 /* Options.swift */,
 				9F5651ED1AAAF5F80030886B /* ViewController.swift */,
+				9F7BD3CF1AAB5BD300DF71D9 /* Ranking.swift */,
 				9FC36B921AAB099300DD1575 /* SignUp.swift */,
 				9F7BD3A91AAB119600DF71D9 /* LogIn.swift */,
 				9F7BD3C91AAB1ED100DF71D9 /* MapsController.swift */,
-				9FDC41441AAC3BC4009AB445 /* a.png */,
-				9F7BD3CF1AAB5BD300DF71D9 /* Ranking.swift */,
 				9F7BD3D11AAB5EB100DF71D9 /* RankingCell.swift */,
 				9FDC413C1AAC2E78009AB445 /* Desaparecido.swift */,
 				9F4556001AABE91F0016422F /* EstacionarmeController.swift */,
@@ -220,6 +267,7 @@
 				9F5651F41AAAF5F80030886B /* LaunchScreen.xib */,
 				9F5651E91AAAF5F80030886B /* Supporting Files */,
 				9FC36B8F1AAB043300DD1575 /* Bridge.h */,
+				9FDC41821AAC9E6F009AB445 /* MaloController.swift */,
 			);
 			path = Estacionate;
 			sourceTree = "<group>";
@@ -287,22 +335,46 @@
 		9FDC410B1AABF19C009AB445 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				9FDC41801AAC9D10009AB445 /* Logo-Buscate-Cian.png */,
+				9FDC417C1AAC54B6009AB445 /* Logo-Estacionate-Cian2.png */,
+				9FDC417A1AAC53D2009AB445 /* Logo-Estacionate-Cian.png */,
+				9FDC41781AAC530E009AB445 /* Logo-Estacionate-Red.png */,
+				9FDC41481AAC4126009AB445 /* Tipo-Estacionate.png */,
 				9FDC413A1AAC2D03009AB445 /* autodesaparecido.png */,
+				9FDC417E1AAC59E7009AB445 /* Logo-Estacionate-Sombra.png */,
 				9FDC413E1AAC3213009AB445 /* Logo-Buscate.png */,
-				9FDC413F1AAC3213009AB445 /* Logo-Estacionate.png */,
-				9FDC41361AAC2747009AB445 /* estacionamiento2.png */,
-				9FDC41371AAC2747009AB445 /* robo2.png */,
-				9FDC412E1AAC22B5009AB445 /* estacionamiento.png */,
-				9FDC412F1AAC22B5009AB445 /* grua.png */,
-				9FDC41301AAC22B5009AB445 /* robo.png */,
+				9FDC414E1AAC5046009AB445 /* Logo-Estacionate.png */,
+				9FDC41461AAC40D2009AB445 /* Logo-Estacionate-Azul.png */,
 				9FDC410C1AABF228009AB445 /* estacionarmeimagen.png */,
 				9FDC41181AAC0049009AB445 /* yips.jpg */,
 				9FDC41141AABF5BB009AB445 /* estacionarmecamara.png */,
 				9FDC41281AAC0658009AB445 /* back.png */,
+				9FDC41501AAC50B9009AB445 /* araña.png */,
+				9FDC41511AAC50B9009AB445 /* araña.psd */,
+				9FDC41521AAC50B9009AB445 /* autopartes.png */,
+				9FDC41841AACB6C1009AB445 /* vandalismo.png */,
+				9FDC41531AAC50B9009AB445 /* autopartes.psd */,
+				9FDC41541AAC50B9009AB445 /* bote.png */,
+				9FDC41551AAC50B9009AB445 /* bote.psd */,
+				9FDC41561AAC50B9009AB445 /* estacionamiento.png */,
+				9FDC41571AAC50B9009AB445 /* estacionamiento.psd */,
+				9FDC41581AAC50B9009AB445 /* franelero.png */,
+				9FDC41591AAC50B9009AB445 /* franelero.psd */,
+				9FDC415A1AAC50B9009AB445 /* grua.png */,
+				9FDC415B1AAC50B9009AB445 /* grua.psd */,
+				9FDC415C1AAC50B9009AB445 /* noestacionarse.png */,
+				9FDC415D1AAC50B9009AB445 /* noestacionarse.psd */,
+				9FDC415E1AAC50B9009AB445 /* parquimetro.png */,
+				9FDC415F1AAC50B9009AB445 /* parquimetro.psd */,
+				9FDC41601AAC50B9009AB445 /* reservados.png */,
+				9FDC41611AAC50B9009AB445 /* reservados.psd */,
+				9FDC41621AAC50B9009AB445 /* robo.png */,
+				9FDC41631AAC50B9009AB445 /* robo.psd */,
 				9FDC412C1AAC065F009AB445 /* estacionarmecomentario.png */,
 				9FDC41291AAC0658009AB445 /* continue.png */,
 				9FDC41261AAC0651009AB445 /* autodesaparecido2.png */,
 				9FDC41091AABF197009AB445 /* estacionarmelike.png */,
+				9FDC414C1AAC4A7F009AB445 /* Logo-Estacionate-Blanco.png */,
 				9FDC41161AABF7C8009AB445 /* estacionarmerefresh.png */,
 				9FDC41121AABF4D1009AB445 /* homeestacionate.png */,
 				9FDC410E1AABF3FD009AB445 /* estacionarmeabuso.png */,
@@ -391,31 +463,54 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FDC41391AAC2747009AB445 /* robo2.png in Resources */,
-				9FDC41381AAC2747009AB445 /* estacionamiento2.png in Resources */,
+				9FDC416D1AAC50B9009AB445 /* franelero.psd in Resources */,
 				9F5651F11AAAF5F80030886B /* Main.storyboard in Resources */,
+				9FDC41811AAC9D10009AB445 /* Logo-Buscate-Cian.png in Resources */,
 				9FDC41151AABF5BB009AB445 /* estacionarmecamara.png in Resources */,
-				9FDC41451AAC3BC4009AB445 /* a.png in Resources */,
-				9FDC41321AAC22B5009AB445 /* grua.png in Resources */,
+				9FDC41681AAC50B9009AB445 /* bote.png in Resources */,
+				9FDC41691AAC50B9009AB445 /* bote.psd in Resources */,
+				9FDC414D1AAC4A7F009AB445 /* Logo-Estacionate-Blanco.png in Resources */,
+				9FDC416A1AAC50B9009AB445 /* estacionamiento.png in Resources */,
+				9FDC414F1AAC5046009AB445 /* Logo-Estacionate.png in Resources */,
 				9FDC410A1AABF197009AB445 /* estacionarmelike.png in Resources */,
+				9FDC41661AAC50B9009AB445 /* autopartes.png in Resources */,
 				9FDC413B1AAC2D03009AB445 /* autodesaparecido.png in Resources */,
 				9FDC41171AABF7C8009AB445 /* estacionarmerefresh.png in Resources */,
 				9FDC412A1AAC0658009AB445 /* back.png in Resources */,
+				9FDC41641AAC50B9009AB445 /* araña.png in Resources */,
+				9FDC417D1AAC54B6009AB445 /* Logo-Estacionate-Cian2.png in Resources */,
 				9FDC41191AAC0049009AB445 /* yips.jpg in Resources */,
+				9FDC41671AAC50B9009AB445 /* autopartes.psd in Resources */,
+				9FDC417F1AAC59E7009AB445 /* Logo-Estacionate-Sombra.png in Resources */,
+				9FDC416C1AAC50B9009AB445 /* franelero.png in Resources */,
 				9FDC41131AABF4D1009AB445 /* homeestacionate.png in Resources */,
 				9FDC412B1AAC0658009AB445 /* continue.png in Resources */,
-				9FDC41311AAC22B5009AB445 /* estacionamiento.png in Resources */,
-				9FDC41411AAC3213009AB445 /* Logo-Estacionate.png in Resources */,
+				9FDC41731AAC50B9009AB445 /* parquimetro.psd in Resources */,
+				9FDC41721AAC50B9009AB445 /* parquimetro.png in Resources */,
 				9FDC41401AAC3213009AB445 /* Logo-Buscate.png in Resources */,
+				9FDC416E1AAC50B9009AB445 /* grua.png in Resources */,
 				9F5651F61AAAF5F80030886B /* LaunchScreen.xib in Resources */,
 				9FDC412D1AAC065F009AB445 /* estacionarmecomentario.png in Resources */,
-				9FDC41331AAC22B5009AB445 /* robo.png in Resources */,
+				9FDC41771AAC50B9009AB445 /* robo.psd in Resources */,
 				9F5651F31AAAF5F80030886B /* Images.xcassets in Resources */,
+				9FDC416F1AAC50B9009AB445 /* grua.psd in Resources */,
 				9F7BD3CC1AAB212100DF71D9 /* GoogleMaps.bundle in Resources */,
 				9FDC41271AAC0651009AB445 /* autodesaparecido2.png in Resources */,
+				9FDC417B1AAC53D2009AB445 /* Logo-Estacionate-Cian.png in Resources */,
+				9FDC41741AAC50B9009AB445 /* reservados.png in Resources */,
+				9FDC41761AAC50B9009AB445 /* robo.png in Resources */,
+				9FDC41471AAC40D2009AB445 /* Logo-Estacionate-Azul.png in Resources */,
+				9FDC41701AAC50B9009AB445 /* noestacionarse.png in Resources */,
+				9FDC41711AAC50B9009AB445 /* noestacionarse.psd in Resources */,
+				9FDC41791AAC530E009AB445 /* Logo-Estacionate-Red.png in Resources */,
+				9FDC41751AAC50B9009AB445 /* reservados.psd in Resources */,
+				9FDC41491AAC4126009AB445 /* Tipo-Estacionate.png in Resources */,
 				9FDC410D1AABF228009AB445 /* estacionarmeimagen.png in Resources */,
+				9FDC41651AAC50B9009AB445 /* araña.psd in Resources */,
 				9FDC41111AABF4CA009AB445 /* estacionarmevolante.png in Resources */,
 				9FDC410F1AABF3FD009AB445 /* estacionarmeabuso.png in Resources */,
+				9FDC416B1AAC50B9009AB445 /* estacionamiento.psd in Resources */,
+				9FDC41851AACB6C1009AB445 /* vandalismo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +545,7 @@
 				9F7BD3D01AAB5BD300DF71D9 /* Ranking.swift in Sources */,
 				9F7BD3CA1AAB1ED100DF71D9 /* MapsController.swift in Sources */,
 				9FDC41231AAC00AA009AB445 /* MainCell.swift in Sources */,
+				9FDC41831AAC9E6F009AB445 /* MaloController.swift in Sources */,
 				9FDC41241AAC00AA009AB445 /* ViewCustomCell.swift in Sources */,
 				9F7BD3D21AAB5EB100DF71D9 /* RankingCell.swift in Sources */,
 			);
