@@ -19,6 +19,7 @@ class Ranking: UIViewController,UITableViewDelegate, UITableViewDataSource{
         nombres = ["Maritza Basilio Acosta","Narcisa Caridad Ureña","Cruz Rosario Roldán","Reyes Chus Asis","María Guadalupe Zapatero","Chus Reyes Santillian","Odalis Ale Pérez","Guiomar Rosario Santos","Guadalupe Fran Gonzalez","Ale Cruz Iñíguez","Cruz Guadalupe Alvarado","Cruz Guadalupe Alvarado","Guadalupe Ale Albuquerque","Ale Cruz Guadarrama","Trinidad Fran Ruiz"]
         tb_ranking.delegate = self
         tb_ranking.dataSource = self
+        tb_ranking.showsVerticalScrollIndicator = false
         
         tb_ranking.separatorColor = UIColor.clearColor()
         
@@ -42,6 +43,7 @@ class Ranking: UIViewController,UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
             let cell = tb_ranking.dequeueReusableCellWithIdentifier("RCell") as RankingCell
+        cell.selectionStyle = .None
             cell.setCell(["\(indexPath.row+1)",nombres[indexPath.row],"\(1000-indexPath.row*34) pts"])
             return cell
     }

@@ -104,6 +104,9 @@ class SignUp: UIViewController,UITextFieldDelegate {
 
     
     @IBAction func registro() {
+        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Estacionarme") as EstacionarmeController
+        self.navigationController?.pushViewController(nView, animated: true)
+
     }
     
 }
