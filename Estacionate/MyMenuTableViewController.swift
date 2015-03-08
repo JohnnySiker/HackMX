@@ -1,11 +1,3 @@
-//
-//  MyMenuTableViewController.swift
-//  SwiftSideMenu
-//
-//  Created by Evgeny Nazarov on 29.09.14.
-//  Copyright (c) 2014 Evgeny Nazarov. All rights reserved.
-//
-
 import UIKit
 
 class MyMenuTableViewController: UITableViewController {
@@ -14,7 +6,7 @@ class MyMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.scrollEnabled = false
-       // let c = CustomMainCell()
+        // let c = CustomMainCell()
         tableView.rowHeight = 600.0
         //tableView.allowsSelection = false
         // Customize apperance of table view
@@ -47,24 +39,54 @@ class MyMenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 5
+        return 4
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var default_cell = ViewCustomCell()
-        default_cell.setCell("", lbl_name:"",notif_name:"")
-
-        
-        return default_cell;
+        switch(indexPath.row){
+        case 0:
+            var cell = CustomMainCell()
+            cell.selectionStyle = .None
+            cell.setCell("circleProfileM", lbl_name:"Alejandro", lbl_last:"Zepeda",ranking:"Ranking: 57.4")
+            return cell
+        case 1:
+            var cell = ViewCustomCell()
+            cell.selectionStyle = .None
+            cell.setCell("", lbl_name:"Ranking",lbl_name2:"General")
+            return cell
+        case 2:
+            var cell = ViewCustomCell()
+            cell.selectionStyle = .None
+            cell.setCell("", lbl_name:"",lbl_name2:"Opciones")
+            return cell
+            
+        case 3:
+            var cell = ViewCustomCell()
+            cell.selectionStyle = .None
+            cell.setCell("", lbl_name:"Cerrar Sesión",lbl_name2:"")
+            return cell
+            
+        case 4:
+            var cell = ViewCustomCell()
+            cell.selectionStyle = .None
+            cell.setCell("", lbl_name:"",lbl_name2:"")
+            return cell
+            
+        default:
+            var default_cell = ViewCustomCell()
+            default_cell.selectionStyle = .None
+            default_cell.setCell("circleProfile", lbl_name:"Parqueate",lbl_name2:"Algo")
+            return default_cell
+        }
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0){
             return 300.0
         }
- 
         
-        return 50.0
+        
+        return 70.0
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -72,40 +94,39 @@ class MyMenuTableViewController: UITableViewController {
         selectedMenuItem = indexPath.row
         
         //Present new view controller
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
         var destViewController : UIViewController
         
         switch(selectedMenuItem){
         case 0:
             println("0")
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("UserProfile") as UIViewController
+            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("UserProfile") as UIViewController
             
         case 1:
             println("1")
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyPets") as UIViewController
+            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyPets") as UIViewController
             
         case 2:
             println("2")
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ChatSol") as UIViewController
+            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ChatSol") as UIViewController
             
         case 3:
             println("3")
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Likes") as UIViewController
+            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Likes") as UIViewController
             
         case 4:
             println("4")
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Opciones") as UIViewController
+            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Opciones") as UIViewController
             
             
         default:
             println("Default")
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LogIn") as UIViewController
+            // destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LogIn") as UIViewController
             break
             
         }
-        sideMenuController()?.setContentViewController(destViewController)
+        // sideMenuController()?.setContentViewController(destViewController)
     }
     
     
 }
-

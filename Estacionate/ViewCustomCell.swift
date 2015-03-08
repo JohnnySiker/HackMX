@@ -1,18 +1,10 @@
-//
-//  ViewCustomCell.swift
-//  DogOrNot
-//
-//  Created by Aldo Antonio Martinez Avalos on 25/02/15.
-//  Copyright (c) 2015 Clipp. All rights reserved.
-//
-
 import UIKit
 
 class ViewCustomCell: UITableViewCell {
     
-    var img:UIImageView!
+    var view:UIView!
     var lbl:UILabel!
-    var notif:UIImageView!
+    var lbl_2:UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,26 +17,25 @@ class ViewCustomCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(img_name:String, lbl_name:String,notif_name:String){
+    func setCell(img_name:String, lbl_name:String,lbl_name2:String){
         
         self.backgroundColor = UIColor.clearColor()
         
-        img = UIImageView()
+        view = UIView()
         lbl = UILabel()
-        notif = UIImageView()
+        lbl_2 = UILabel()
         
-        self.img.image = UIImage(named:img_name)
         self.lbl.text = lbl_name
-        self.notif.image = UIImage(named: notif_name)
+        self.lbl_2.text = lbl_name2
+        self.view.backgroundColor = UIColor.darkGrayColor()
         
-        self.img.frame = CGRect(x:20,y:15,width:20,height:20)
-        self.lbl.frame = CGRect(x:50,y:15,width:150,height:30)
-        self.notif.frame = CGRect(x: 190, y: 10, width: 10, height: 10)
+        self.lbl.frame = CGRect(x:45,y:15,width:150,height:30)
+        self.lbl_2.frame = CGRect(x: 65, y: 35, width: 150, height: 50)
+        self.view.frame = CGRect(x: 20, y: 5, width: 180, height: 2)
         
-        self.contentView.addSubview(img)
         self.contentView.addSubview(lbl)
-        self.contentView.addSubview(notif)
+        self.contentView.addSubview(lbl_2)
+        self.contentView.addSubview(view)
     }
     
 }
-

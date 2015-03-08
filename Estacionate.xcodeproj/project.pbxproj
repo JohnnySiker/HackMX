@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4555FF1AABD5460016422F /* CustomMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4555FE1AABD5460016422F /* CustomMainCell.swift */; };
 		9F5651EC1AAAF5F80030886B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5651EB1AAAF5F80030886B /* AppDelegate.swift */; };
 		9F5651EE1AAAF5F80030886B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5651ED1AAAF5F80030886B /* ViewController.swift */; };
 		9F5651F11AAAF5F80030886B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5651EF1AAAF5F80030886B /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F4555FE1AABD5460016422F /* CustomMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMainCell.swift; sourceTree = "<group>"; };
 		9F5651E61AAAF5F80030886B /* Estacionate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Estacionate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5651EA1AAAF5F80030886B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5651EB1AAAF5F80030886B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				9F99ACD41AABB4A00039DBDA /* MyNavigationController.swift */,
 				9F99ACD61AABB53F0039DBDA /* ENSideMenuNavigationController.swift */,
 				9F99ACD71AABB53F0039DBDA /* ENSideMenu.swift */,
+				9F4555FE1AABD5460016422F /* CustomMainCell.swift */,
 				9F99ACD01AABB4830039DBDA /* MainCell.swift */,
 				9F99ACD21AABB48D0039DBDA /* ViewCustomCell.swift */,
 				9F99ACCE1AABB46B0039DBDA /* MyMenuTableViewController.swift */,
@@ -330,6 +333,7 @@
 				9FC36B931AAB099300DD1575 /* SignUp.swift in Sources */,
 				9F5651EC1AAAF5F80030886B /* AppDelegate.swift in Sources */,
 				9F99ACD31AABB48D0039DBDA /* ViewCustomCell.swift in Sources */,
+				9F4555FF1AABD5460016422F /* CustomMainCell.swift in Sources */,
 				9F7BD3AA1AAB119600DF71D9 /* LogIn.swift in Sources */,
 				9F99ACCF1AABB46B0039DBDA /* MyMenuTableViewController.swift in Sources */,
 				9F7BD3D01AAB5BD300DF71D9 /* Ranking.swift in Sources */,
