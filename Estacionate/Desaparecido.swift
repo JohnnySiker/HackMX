@@ -77,14 +77,16 @@ class Desaparecido: UIViewController,UITextFieldDelegate {
             b.layer.borderWidth = 1
         }
     }
-    
-    
-    @IBAction func enviarPlacas(sender: UIButton) {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
+    
+    
     
     
     @IBAction func refresh(sender: UIButton) {
     }
 
-
+    
 }

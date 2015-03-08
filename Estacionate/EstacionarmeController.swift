@@ -163,12 +163,7 @@ class EstacionarmeController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     
-    @IBAction func buscarCoche(sender: UIButton) {
-        let nView = self.storyboard?.instantiateViewControllerWithIdentifier("Desaparecido") as Desaparecido
-        self.navigationController?.pushViewController(nView, animated: true)
-        //self.sideMenuController()?.setContentViewController(nView)
-        //self.sideMenuController()?.sideMenu?.toggleMenu()
-    }
+  
 
     func sendMsj(msj:String){
         let location = locationManager.location
@@ -357,6 +352,6 @@ class EstacionarmeController: UIViewController,UITableViewDelegate,UITableViewDa
     }*/
 
     
-
+   
 }
 
