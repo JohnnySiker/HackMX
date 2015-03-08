@@ -23,7 +23,7 @@ class Options: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.slider.minimumValue = 50
         distancia = Float(prefs.integerForKey("Distance"))
         self.lbl_distance.text = "\(Int(self.slider.value)) m"
-        self.slider.value = Float(distancia)
+        self.slider.value = distancia
         
         table.delegate = self
         table.dataSource = self

@@ -26,7 +26,7 @@ class ViewController: UIViewController,FBLoginViewDelegate {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.alpha = 0
         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        //prefs.setInteger(0, forKey: "ISLOGGEDIN")
+        prefs.setInteger(0, forKey: "ISLOGGEDIN")
         let isLoggedIn:Int = prefs.integerForKey("ISLOGGEDIN") as Int
         
         if (isLoggedIn > 0) {
